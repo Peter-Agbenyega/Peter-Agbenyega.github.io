@@ -16,28 +16,28 @@ I design secure and scalable cloud infrastructure architectures using AWS and In
 ### ResilientOps AWS Reference Architecture
 Production-grade secure AWS infrastructure implemented with Terraform.
 
-https://github.com/Peter-Agbenyega/ResilientOps-Cloud-Architecture
+[View Project](https://github.com/Peter-Agbenyega/ResilientOps-Cloud-Architecture)
 
 ---
 
 ### ClusterShield360
 Secure Amazon EKS infrastructure architecture with modular Terraform.
 
-https://github.com/Peter-Agbenyega/ClusterShield360
+[View Project](https://github.com/Peter-Agbenyega/ClusterShield360)
 
 ---
 
 ### CloudShield360
 AWS secure landing zone architecture built using Infrastructure-as-Code.
 
-https://github.com/Peter-Agbenyega/CloudShield360
+[View Project](https://github.com/Peter-Agbenyega/CloudShield360)
 
 ---
 
 ### MultiZoneX360
 High-availability multi-zone cloud architecture.
 
-https://github.com/Peter-Agbenyega/MultiZoneX360
+[View Project](https://github.com/Peter-Agbenyega/MultiZoneX360)
 
 ---
 
