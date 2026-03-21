@@ -70,3 +70,11 @@ By focusing on infrastructure automation, secure architecture design, and operat
 
 GitHub  
 https://github.com/Peter-Agbenyega
+
+---
+
+## Resume
+
+- [View Resume](assets/resume/Peter_Agbenyega_Resume.pdf)
+- [GitHub](https://github.com/Peter-Agbenyega)
+- [LinkedIn](https://linkedin.com/in/peter-christian-agbenyega-910b3028b)
