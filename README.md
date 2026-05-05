@@ -54,5 +54,5 @@ http://127.0.0.1:8080
 ## Notes
 
 - `CNAME` remains configured for `petercagbenyega.com`
-- The primary resume link used by the site is `assets/cv/Peter_Agbenyega_Resume.pdf`
+- The primary resume link used by the site is `assets/cv/Peter_Agbenyega_EB2_NIW_Resume.pdf`
 - The site includes print styles, mobile navigation, scroll reveals, animated skill bars, stat counters, and an animated SVG network background

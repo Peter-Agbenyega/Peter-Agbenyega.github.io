@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peter Christian Agbenyega - EB-2 NIW Resume</title>
+    <style>
+      :root {
+        --navy: #0a1628;
+        --electric: #1d4ed8;
+        --gold: #f59e0b;
+        --text: #1e293b;
+        --muted: #475569;
+        --line: #cbd5e1;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--text);
+        background: #ffffff;
+        line-height: 1.45;
+      }
+
+      .resume {
+        width: 8.5in;
+        margin: 0 auto;
+        padding: 0.45in 0.5in 0.5in;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      .header {
+        border-bottom: 3px solid var(--navy);
+        padding-bottom: 0.16in;
+        margin-bottom: 0.22in;
+      }
+
+      .header h1 {
+        font-size: 25px;
+        letter-spacing: 0.03em;
+        color: var(--navy);
+      }
+
+      .header .title {
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--electric);
+        margin-top: 0.03in;
+      }
+
+      .header .meta,
+      .header .certs {
+        margin-top: 0.08in;
+        font-size: 10.5px;
+      }
+
+      .header .meta {
+        color: var(--muted);
+      }
+
+      .header .certs {
+        font-weight: 700;
+      }
+
+      .section {
+        margin-top: 0.18in;
+      }
+
+      .section h2 {
+        font-size: 12px;
+        color: var(--navy);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 0.04in;
+        margin-bottom: 0.1in;
+      }
+
+      .section p,
+      .section li,
+      .entry .sub,
+      .entry .dates {
+        font-size: 10.4px;
+      }
+
+      .entry {
+        margin-bottom: 0.12in;
+      }
+
+      .entry-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.2in;
+        align-items: baseline;
+      }
+
+      .entry-head h3 {
+        font-size: 11.1px;
+        color: var(--text);
+      }
+
+      .entry .sub {
+        color: var(--muted);
+        margin-top: 0.02in;
+      }
+
+      .entry .dates {
+        white-space: nowrap;
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      ul {
+        margin: 0.05in 0 0;
+        padding-left: 0.18in;
+      }
+
+      li + li {
+        margin-top: 0.03in;
+      }
+
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.16in;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 0.1in;
+      }
+
+      .card strong {
+        display: block;
+        font-size: 10.8px;
+        color: var(--navy);
+      }
+
+      .card span,
+      .card p {
+        display: block;
+        font-size: 10px;
+        margin-top: 0.03in;
+      }
+
+      .skills-table {
+        display: grid;
+        gap: 0.05in;
+      }
+
+      .skills-row {
+        display: grid;
+        grid-template-columns: 1.55in 1fr;
+        gap: 0.12in;
+      }
+
+      .skills-row strong {
+        font-size: 10.5px;
+        color: var(--navy);
+      }
+
+      .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.16in;
+      }
+
+      .summary-grid .card {
+        background: #fafcff;
+      }
+
+      .footer {
+        margin-top: 0.16in;
+        padding-top: 0.08in;
+        border-top: 1px solid var(--line);
+        font-size: 10px;
+        color: var(--muted);
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="resume">
+      <header class="header">
+        <h1>PETER CHRISTIAN AGBENYEGA</h1>
+        <p class="title">Cloud Security &amp; DevSecOps Engineer | AWS Security Specialist | Infrastructure Architect</p>
+        <p class="meta">
+          Utica, New York | (315) 941-5498 | peter.cagbenyega@gmail.com |
+          github.com/Peter-Agbenyega | petercagbenyega.com
+        </p>
+        <p class="certs">
+          AWS SAA-C03 | AWS SAP-C02 (DevOps Professional) | AWS SCS-C02 (Security Specialty)
+        </p>
+      </header>
+
+      <section class="section">
+        <h2>Proposed Endeavor - National Interest</h2>
+        <p>
+          Peter Agbenyega's proposed endeavor is the design, publication, and deployment of secure cloud
+          infrastructure reference architectures that directly reduce cloud misconfiguration - identified by CISA and
+          IBM as a leading, preventable cause of US data breaches, costing American organizations an average of
+          $4.45 million per incident. Through open-source reference implementations, an active consulting practice,
+          and graduate research in cloud computing systems, Peter advances the national security and economic
+          resilience of American cloud infrastructure. His work is publicly available, freely reusable, and directly
+          applicable to US small and medium-sized businesses, healthcare organizations, and critical infrastructure
+          operators that lack the resources to maintain dedicated security teams.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>AWS Certifications</h2>
+        <div class="grid-3">
+          <div class="card">
+            <strong>AWS Security - Specialty</strong>
+            <span>SCS-C02</span>
+            <p>IAM, KMS, GuardDuty, CloudTrail, VPC Security</p>
+            <p><strong>Most relevant to endeavor</strong></p>
+          </div>
+          <div class="card">
+            <strong>AWS DevOps Engineer - Professional</strong>
+            <span>SAP-C02</span>
+            <p>CI/CD, IaC, Automation, Monitoring</p>
+            <p><strong>Professional level</strong></p>
+          </div>
+          <div class="card">
+            <strong>AWS Solutions Architect - Associate</strong>
+            <span>SAA-C03</span>
+            <p>VPC, EC2, S3, IAM, Route53, RDS</p>
+            <p><strong>Foundation architecture</strong></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Education</h2>
+        <div class="entry">
+          <div class="entry-head">
+            <h3>Master of Science - Cloud Computing Systems | University of Maryland Global Campus</h3>
+            <span class="dates">In Progress - 2024 to Present</span>
+          </div>
+          <p class="sub">Adelphi, Maryland | Accredited US Graduate Institution</p>
+          <ul>
+            <li>Active coursework in cloud architecture, distributed systems, and advanced cloud security</li>
+            <li>Summer 2025 courses: CLCS 605, CLCS 615 | Planned fall: CLCS 625, 635, 645</li>
+            <li>Graduate research directly informs open-source cloud security reference architecture work</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <div class="entry-head">
+            <h3>Graduate Certificate - Cybersecurity Technology | University of Maryland Global Campus</h3>
+            <span class="dates">In Progress - 2024 to Present</span>
+          </div>
+          <p class="sub">Concurrent with MS | Focused on cloud-native security and compliance frameworks</p>
+        </div>
+        <div class="entry">
+          <div class="entry-head">
+            <h3>Bachelor of Education - Mathematics | University of Cape Coast</h3>
+            <span class="dates">Graduated June 2012</span>
+          </div>
+          <p class="sub">Cape Coast, Ghana | Analytical foundation applied to infrastructure design and security modeling</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Open-Source Security Reference Architectures - Public Contributions</h2>
+        <p>
+          The following reference architectures are published under open-source licenses on GitHub and are freely
+          available to any US organization seeking to strengthen its cloud security posture. Each represents a direct,
+          verifiable contribution to the national interest by reducing cloud misconfiguration risk.
+        </p>
+        <div class="entry">
+          <div class="entry-head">
+            <h3>ResilientOps AWS Reference Architecture | github.com/Peter-Agbenyega/ResilientOps-Cloud-Architecture</h3>
+            <span class="dates">Public - 2025</span>
+          </div>
+          <ul>
+            <li>Production-grade AWS infrastructure implementing multi-tier networking, application load balancing, and auto-scaling patterns essential to American enterprise resilience</li>
+            <li>Terraform modules cover: VPC design, security groups, ALB, Auto Scaling Groups, multi-AZ deployment</li>
+            <li>Directly addresses NIST SP 800-144 guidelines for cloud infrastructure security</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <div class="entry-head">
+            <h3>ClusterShield360 - EKS Security Architecture | github.com/Peter-Agbenyega/ClusterShield360</h3>
+            <span class="dates">Public - 2025</span>
+          </div>
+          <ul>
+            <li>Secure Kubernetes infrastructure on Amazon EKS with RBAC, network policies, and IAM role separation</li>
+            <li>Security-focused container orchestration patterns for organizations running containerized workloads at scale</li>
+            <li>Addresses CIS Kubernetes Benchmark controls for US regulated industry deployments</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <div class="entry-head">
+            <h3>CloudShield360 - AWS Secure Landing Zone | github.com/Peter-Agbenyega/cloudshield360</h3>
+            <span class="dates">Public - 2025</span>
+          </div>
+          <ul>
+            <li>Modular production-ready AWS secure landing zone implementing Infrastructure-as-Code baseline patterns</li>
+            <li>Provides US organizations a controlled, compliant foundation for cloud adoption from day one</li>
+            <li>Implements AWS Well-Architected Framework Security Pillar requirements across all deployed resources</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <div class="entry-head">
+            <h3>DoD-Level CI/CD Security Pipeline | github.com/Peter-Agbenyega/Dod-Level-CICD-Project</h3>
+            <span class="dates">Public - 2025</span>
+          </div>
+          <ul>
+            <li>Department of Defense-inspired security pipeline integrating Gitleaks, Checkov, Trivy, SonarCloud, and OWASP ZAP</li>
+            <li>Multi-stage security gate architecture prevents deployment of misconfigured or vulnerable infrastructure</li>
+            <li>Freely reusable by any US organization seeking defense-grade deployment security practices</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <div class="entry-head">
+            <h3>secure-cloud-baseline-architecture | github.com/Peter-Agbenyega/secure-cloud-baseline-architecture</h3>
+            <span class="dates">Public - 2024</span>
+          </div>
+          <ul>
+            <li>Non-commercial cloud security reference architecture focused on secure-by-design AWS baseline patterns</li>
+            <li>Published explicitly for public-interest cybersecurity resilience - no commercial restriction</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <div class="entry-head">
+            <h3>MultiZoneX360 - High-Availability Architecture | github.com/Peter-Agbenyega/MultiZoneX360</h3>
+            <span class="dates">Public - 2025</span>
+          </div>
+          <ul>
+            <li>Multi-zone AWS architecture demonstrating resilient infrastructure patterns for business continuity</li>
+            <li>Applicable to US healthcare, finance, and critical infrastructure requiring near-zero downtime</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Professional Experience</h2>
+        <div class="entry">
+          <div class="entry-head">
+            <h3>Founder &amp; Principal Cloud Security Engineer | Cloud Nexus Hub LLC</h3>
+            <span class="dates">2024 to Present</span>
+          </div>
+          <p class="sub">Utica, New York | Registered US LLC | cloudnexus360.com</p>
+          <ul>
+            <li>Founded Cloud Nexus Hub LLC to deliver enterprise-grade cloud security consulting to US small and medium-sized businesses that cannot afford dedicated security engineering teams</li>
+            <li>Designed and deployed secure AWS infrastructure for client Adcar Technology LLC - VPC, EC2, IAM, S3 security, Auto Scaling - following AWS Well-Architected Framework security pillar</li>
+            <li>Built and launched Cloud Nexus Pilot (cloudnexuspilot.com) - an AI-powered interview preparation platform for cloud and DevSecOps professionals, featuring AWS Security Specialty practice questions drawn from SCS-C02 expertise</li>
+            <li>Built and launched ubagstore.com - a full e-commerce platform serving Uncle Bakarr African Grocery, Utica, NY - providing digital commerce infrastructure for an underserved, minority-owned small business</li>
+            <li>Built and launched womiex.com - a bilingual (EN/FR) international trade platform for WOMIEX LLC, connecting DRC mineral producers with US industrial buyers and supporting ethical US supply chain security</li>
+            <li>Published 6 open-source AWS security reference architectures freely available on GitHub for US organizational use</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <div class="entry-head">
+            <h3>Cloud Solutions Architect | DevSecOps Consultant | Adcar Technology LLC - Remote</h3>
+            <span class="dates">April 2024 to Present</span>
+          </div>
+          <p class="sub">Client engagement through Cloud Nexus Hub LLC</p>
+          <ul>
+            <li>Designed, deployed, and secured AWS cloud architectures supporting enterprise workloads using EC2, Lambda, VPC, IAM, and CloudTrail</li>
+            <li>Reduced infrastructure provisioning time by 70% through Terraform and CloudFormation automation</li>
+            <li>Developed secure CI/CD pipelines using GitHub Actions and Docker aligned with SOC2 and HIPAA compliance requirements</li>
+            <li>Integrated AWS GuardDuty, WAF, KMS, and Config - delivering continuous security monitoring and auto-remediation</li>
+            <li>Implemented policy-as-code using Rego (OPA) to enforce compliance guardrails at scale across AWS environments</li>
+            <li>Deployed Kubernetes workloads on Amazon EKS with Helm charts, RBAC, and automated security scanning</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <div class="entry-head">
+            <h3>Cloud Engineer | DevOps Engineer | Adkar Technology LLC - Remote</h3>
+            <span class="dates">July 2019 to March 2024</span>
+          </div>
+          <p class="sub">Accra, Ghana and Remote</p>
+          <ul>
+            <li>Led development of enterprise-grade, cloud-native platforms on AWS, applying security-first design principles across all architecture layers</li>
+            <li>Built CI/CD pipelines integrating Jenkins, Git, and Docker - reducing time-to-deployment while strengthening security gate enforcement</li>
+            <li>Conducted vulnerability assessments and hardened IAM roles using a least-privilege model - reducing the AWS attack surface across client accounts</li>
+            <li>Managed PostgreSQL, MongoDB, and DynamoDB for scalable and compliant application backends</li>
+            <li>Led migration of monolithic systems to microservices on Amazon EKS - improving deployment velocity and security isolation</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Technical Expertise</h2>
+        <div class="skills-table">
+          <div class="skills-row">
+            <strong>Cloud Platforms</strong>
+            <span>AWS (EC2, VPC, Lambda, RDS, S3, IAM, CloudTrail, GuardDuty, KMS, WAF, Config, Security Hub, Route53)</span>
+          </div>
+          <div class="skills-row">
+            <strong>Infrastructure as Code</strong>
+            <span>Terraform, AWS CloudFormation, OPA Rego, Ansible - automated provisioning and compliance</span>
+          </div>
+          <div class="skills-row">
+            <strong>Security Tools</strong>
+            <span>Gitleaks, Checkov, Trivy, OWASP ZAP, SonarCloud, AWS GuardDuty, IAM Policy Analyzer</span>
+          </div>
+          <div class="skills-row">
+            <strong>DevSecOps Pipeline</strong>
+            <span>GitHub Actions, Jenkins, AWS CodePipeline - multi-stage security gate CI/CD implementation</span>
+          </div>
+          <div class="skills-row">
+            <strong>Containers</strong>
+            <span>Docker, Kubernetes (EKS), Helm Charts, ArgoCD - secure container orchestration</span>
+          </div>
+          <div class="skills-row">
+            <strong>Monitoring</strong>
+            <span>AWS CloudWatch, ELK Stack, Datadog - infrastructure observability and security alerting</span>
+          </div>
+          <div class="skills-row">
+            <strong>Compliance Frameworks</strong>
+            <span>NIST CSF, CIS AWS Benchmarks, AWS Well-Architected, SOC2, HIPAA</span>
+          </div>
+          <div class="skills-row">
+            <strong>Languages</strong>
+            <span>Python, Bash, Rego (OPA), SQL, TypeScript - infrastructure automation and security tooling</span>
+          </div>
+          <div class="skills-row">
+            <strong>Full-Stack Development</strong>
+            <span>Next.js, React, FastAPI, PostgreSQL, SQLite - SaaS product development for Cloud Nexus Hub</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>National Interest Contribution Summary</h2>
+        <div class="summary-grid">
+          <div class="card">
+            <strong>Substantial Merit</strong>
+            <p>AWS Security Specialty - one of AWS's most rigorous credentials. 3 certifications total including Professional level. MS Cloud Computing Systems in progress at accredited US institution.</p>
+          </div>
+          <div class="card">
+            <strong>National Importance</strong>
+            <p>Cloud misconfiguration is a top CISA-cited cause of US breaches. Reference architectures address NIST CSF. Work protects US SMBs - 99.9% of all American businesses. DoD-level security pipeline implementation.</p>
+          </div>
+          <div class="card">
+            <strong>Well Positioned</strong>
+            <p>5+ years hands-on cloud security experience. 6 live open-source reference architectures. Active US-based LLC with real clients. Community impact through digital infrastructure for minority-owned businesses.</p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        Portfolio: petercagbenyega.com | GitHub: github.com/Peter-Agbenyega | Company: cloudnexus360.com<br />
+        References and supporting documentation available upon request.
+      </footer>
+    </main>
+  </body>
+</html>
