@@ -1,80 +1,58 @@
-# Peter Christian Agbenyega
+# Peter Christian Agbenyega - EB-2 NIW Portfolio
 
-Cloud Security & DevSecOps Engineer  
-AWS | Terraform | Secure Infrastructure Architect
+Static professional portfolio for `petercagbenyega.com`, built to present Peter Christian Agbenyega's cloud security, DevSecOps, and infrastructure architecture work as evidence for an EB-2 National Interest Waiver petition.
 
----
+## Stack
 
-## Overview
+- `index.html`
+- `style.css`
+- `script.js`
+- Inline SVG diagrams
+- No framework, build step, or package manager
 
-I design secure, scalable, and resilient cloud infrastructure architectures using AWS and Infrastructure-as-Code. My work focuses on strengthening cybersecurity resilience and reducing cloud misconfiguration risks through open reference architectures built with Terraform.
+## Purpose
 
-These projects demonstrate practical infrastructure patterns that support secure cloud adoption, resilient application delivery, and repeatable infrastructure deployment practices.
+This site is structured as an evidence-focused portfolio rather than a generic personal website. The content emphasizes:
 
----
+- National relevance of cloud security and misconfiguration risk
+- Public reference architectures and technical documentation
+- AWS certifications and graduate study
+- Applied commercial work through Cloud Nexus Hub LLC and related products
+- Public GitHub repositories showing hands-on implementation
 
-## Featured Cloud Architecture Projects
+## Files
 
-### ResilientOps AWS Reference Architecture
-A secure and resilient AWS infrastructure architecture implemented using Terraform modules. The design demonstrates multi-tier networking, application load balancing, and auto-scaling patterns commonly used in modern cloud environments.
+```text
+.
+├── CNAME
+├── index.html
+├── style.css
+├── script.js
+├── README.md
+└── assets
+    ├── cv
+    │   └── Peter_Agbenyega_Resume.pdf
+    ├── diagrams
+    └── resume
+        └── Peter_Agbenyega_Resume.pdf
+```
 
-View Project  
-https://github.com/Peter-Agbenyega/ResilientOps-Cloud-Architecture
+## Local Preview
 
----
+Run any simple static file server from the repository root, for example:
 
-### ClusterShield360
-A secure Kubernetes infrastructure architecture built on Amazon EKS using modular Terraform. The project demonstrates container infrastructure provisioning with security-focused design patterns.
+```bash
+python3 -m http.server 8080
+```
 
-View Project  
-https://github.com/Peter-Agbenyega/ClusterShield360
+Then open:
 
----
+```text
+http://127.0.0.1:8080
+```
 
-### CloudShield360
-A secure AWS cloud environment architecture demonstrating Infrastructure-as-Code deployment patterns for building controlled and secure cloud environments.
+## Notes
 
-View Project  
-https://github.com/Peter-Agbenyega/CloudShield360
-
----
-
-### MultiZoneX360
-A high-availability multi-zone cloud architecture designed to demonstrate resilient cloud infrastructure patterns using Terraform and AWS services.
-
-View Project  
-https://github.com/Peter-Agbenyega/MultiZoneX360
-
----
-
-## Areas of Focus
-
-- Cloud Security Architecture (AWS)
-- Infrastructure-as-Code Security (Terraform)
-- Identity and Access Management (Least Privilege)
-- Secure Network Architecture Design
-- Security Monitoring and Infrastructure Drift Detection
-- Secure-by-Design Cloud Infrastructure
-
----
-
-## National Interest Relevance
-
-Cloud misconfiguration remains one of the leading causes of cloud security incidents. These projects demonstrate repeatable infrastructure security patterns that help organizations deploy cloud systems more safely and reliably.
-
-By focusing on infrastructure automation, secure architecture design, and operational resilience, these reference implementations contribute to improving cloud security practices and reducing systemic risks in modern cloud environments.
-
----
-
-## Contact
-
-GitHub  
-https://github.com/Peter-Agbenyega
-
----
-
-## Resume
-
-- [View Resume](assets/resume/Peter_Agbenyega_Resume.pdf)
-- [GitHub](https://github.com/Peter-Agbenyega)
-- [LinkedIn](https://linkedin.com/in/peter-christian-agbenyega-910b3028b)
+- `CNAME` remains configured for `petercagbenyega.com`
+- The primary resume link used by the site is `assets/cv/Peter_Agbenyega_Resume.pdf`
+- The site includes print styles, mobile navigation, scroll reveals, animated skill bars, stat counters, and an animated SVG network background
