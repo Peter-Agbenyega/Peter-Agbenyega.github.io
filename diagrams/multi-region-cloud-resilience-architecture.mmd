@@ -1,0 +1,22 @@
+flowchart LR
+  users[Users]
+  dns[DNS and Traffic Routing]
+  primary[Primary Region]
+  replicate[Replication Layer]
+  secondary[Secondary Region]
+  monitor[Monitoring and Health Checks]
+  runbook[Failover Runbook]
+  backups[Backups]
+
+  users --> dns --> primary --> replicate --> secondary
+  primary --> backups
+  replicate --> backups
+  primary --> monitor
+  secondary --> monitor
+  monitor --> runbook
+  runbook --> dns
+
+  subgraph Recovery
+    secondary
+    runbook
+  end

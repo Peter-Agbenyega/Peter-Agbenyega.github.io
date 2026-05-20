@@ -1,0 +1,20 @@
+flowchart LR
+  iam[Identity and IAM]
+  net[Network Controls]
+  kms[Encryption and KMS]
+  logs[Logging and Monitoring]
+  detect[Threat Detection]
+  map[Compliance Mapping]
+  backlog[Remediation Backlog]
+  least[Least Privilege Review]
+  findings[Findings Queue]
+
+  iam --> net --> kms --> logs --> detect --> map --> backlog
+  least --> iam
+  logs --> findings --> detect
+  map --> findings
+
+  subgraph Governance
+    map
+    backlog
+  end

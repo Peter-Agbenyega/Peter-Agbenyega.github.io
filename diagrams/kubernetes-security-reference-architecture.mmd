@@ -1,0 +1,22 @@
+flowchart LR
+  dev[Developer]
+  scm[Source Control]
+  cicd[CI/CD Pipeline]
+  gate[Image Scan and Security Gate]
+  reg[Container Registry]
+  cp[Kubernetes Control Plane]
+  nodes[Private Worker Nodes]
+  policy[Namespaces RBAC NetworkPolicy]
+  obs[Observability and Logging]
+  secrets[Secrets Management]
+
+  dev --> scm --> cicd --> gate --> reg --> cp --> nodes --> policy --> obs
+  secrets --> cicd
+  secrets --> cp
+  obs --> cicd
+
+  subgraph Platform
+    cp
+    nodes
+    policy
+  end

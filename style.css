@@ -516,6 +516,14 @@ svg {
   font-size: 1.5rem;
 }
 
+.project-alias,
+.repo-alias {
+  margin: 0 0 0.75rem;
+  font: 600 0.8rem/1.4 "JetBrains Mono", monospace;
+  letter-spacing: 0.02em;
+  color: rgba(169, 196, 255, 0.82);
+}
+
 .project-card p,
 .commercial-card p,
 .repo-card p {
@@ -564,6 +572,52 @@ svg {
 .project-diagram text {
   font: 600 10px/1.2 "JetBrains Mono", monospace;
   fill: rgba(255, 255, 255, 0.86);
+}
+
+.project-diagram .diagram-title {
+  font: 700 12px/1.2 "JetBrains Mono", monospace;
+  letter-spacing: 0.04em;
+  fill: #ffd27a;
+}
+
+.project-diagram .diagram-label {
+  font: 600 9px/1.2 "JetBrains Mono", monospace;
+  fill: rgba(169, 196, 255, 0.9);
+}
+
+.diagram-caption {
+  margin: 0 0 0.9rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.diagram-node,
+.diagram-layer {
+  fill: rgba(29, 78, 216, 0.12);
+  stroke: rgba(125, 164, 255, 0.82);
+  stroke-width: 1.4;
+}
+
+.diagram-node-gold {
+  fill: rgba(245, 158, 11, 0.1);
+  stroke: rgba(245, 158, 11, 0.86);
+}
+
+.diagram-node-success,
+.diagram-layer {
+  fill: rgba(16, 185, 129, 0.08);
+  stroke: rgba(16, 185, 129, 0.8);
+}
+
+.diagram-arrow {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.74);
+  stroke-width: 1.7;
+  stroke-linecap: round;
+}
+
+.diagram-arrow.dashed {
+  stroke-dasharray: 5 4;
 }
 
 .aws-boundary,
@@ -873,6 +927,10 @@ svg {
   color: var(--muted);
 }
 
+.repo-card .repo-alias {
+  color: var(--electric);
+}
+
 .repo-meta span {
   background: rgba(29, 78, 216, 0.08);
   color: var(--text);
@@ -1152,6 +1210,14 @@ svg {
 
   .badge {
     font-size: 0.76rem;
+  }
+
+  .project-diagram text {
+    font-size: 9px;
+  }
+
+  .project-diagram .diagram-title {
+    font-size: 11px;
   }
 }
 

@@ -1,0 +1,24 @@
+flowchart LR
+  source[Source Code]
+  secrets[Secret Scan]
+  sast[SAST and IaC Scan]
+  build[Build and Test]
+  artifacts[Artifact Repository]
+  scan[Container Scan]
+  approve[Approval Gate]
+  deploy[Deploy]
+  monitor[Monitoring and Feedback]
+  rollback[Rollback Path]
+  audit[Audit Logs]
+
+  source --> secrets --> sast --> build --> artifacts --> scan --> approve --> deploy --> monitor
+  approve --> audit
+  deploy --> audit
+  monitor --> rollback
+  rollback --> deploy
+
+  subgraph Promotion
+    artifacts
+    approve
+    deploy
+  end

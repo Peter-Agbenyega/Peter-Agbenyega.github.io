@@ -1,0 +1,15 @@
+.claude/
+.codex/
+.cursor/
+.aider*
+ai-notes/
+prompts/
+scratchpad/
+agent-log*
+codex-output*
+claude-output*
+chat-transcript*
+ai-generated*
+*.tmp
+*.bak
+.DS_Store
