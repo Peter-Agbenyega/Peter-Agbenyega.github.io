@@ -1,6 +1,6 @@
-# Peter Christian Agbenyega - EB-2 NIW Portfolio
+# Peter Christian Agbenyega — Technical Evidence Portfolio
 
-This repository contains the public portfolio for `petercagbenyega.com`. It presents cloud security, DevSecOps, and resilience reference work in a format intended for technical review, public-interest evidence, and EB-2 NIW support.
+This repository contains the public portfolio for `petercagbenyega.com`. It presents cloud security, DevSecOps, and resilience reference work in a format intended for technical review and public-interest documentation.
 
 ## Overview
 
@@ -66,7 +66,7 @@ Cloud misconfiguration, weak identity boundaries, missing logging, and insecure 
 
 - `index.html`, `style.css`, `script.js`: public portfolio site
 - `diagrams/`: Mermaid architecture diagrams
-- `evidence/`: NIW-oriented support documentation
+- `evidence/`: technical evidence support documentation
 - `assets/cv/`: public resume assets
 
 ## Disclaimer
