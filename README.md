@@ -67,7 +67,7 @@ Cloud misconfiguration, weak identity boundaries, missing logging, and insecure 
 - `index.html`, `style.css`, `script.js`: public portfolio site
 - `diagrams/`: Mermaid architecture diagrams
 - `evidence/`: technical evidence support documentation
-- `assets/cv/`: public resume assets
+- `assets/resume/`: public resume assets
 
 ## Disclaimer
 
