@@ -458,7 +458,10 @@ svg {
   gap: 1.25rem;
 }
 
-.project-grid,
+.project-grid {
+  grid-template-columns: 1fr;
+}
+
 .repo-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -557,32 +560,37 @@ svg {
 }
 
 .project-diagram {
-  background: rgba(6, 15, 30, 0.68);
-  border-radius: 18px;
-  padding: 0.7rem;
+  background: #F1F5F9;
+  border-radius: 8px;
+  padding: 0.65rem;
   margin-bottom: 1.15rem;
-  border: 1px solid rgba(148, 163, 184, 0.14);
+  border: 1px solid rgba(203, 213, 225, 0.9);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
+.project-diagram img,
 .project-diagram svg {
+  display: block;
   width: 100%;
+  min-width: 820px;
   height: auto;
 }
 
 .project-diagram text {
   font: 600 10px/1.2 "JetBrains Mono", monospace;
-  fill: rgba(255, 255, 255, 0.86);
+  fill: #1E293B;
 }
 
 .project-diagram .diagram-title {
   font: 700 12px/1.2 "JetBrains Mono", monospace;
   letter-spacing: 0.04em;
-  fill: #ffd27a;
+  fill: #0F172A;
 }
 
 .project-diagram .diagram-label {
   font: 600 9px/1.2 "JetBrains Mono", monospace;
-  fill: rgba(169, 196, 255, 0.9);
+  fill: #475569;
 }
 
 .diagram-caption {
@@ -593,31 +601,27 @@ svg {
 
 .diagram-node,
 .diagram-layer {
-  fill: rgba(29, 78, 216, 0.12);
-  stroke: rgba(125, 164, 255, 0.82);
-  stroke-width: 1.4;
+  fill: #FFFFFF;
+  stroke: #93C5FD;
+  stroke-width: 1.5;
 }
 
 .diagram-node-gold {
-  fill: rgba(245, 158, 11, 0.1);
-  stroke: rgba(245, 158, 11, 0.86);
+  fill: #FFFBEB;
+  stroke: #F59E0B;
 }
 
 .diagram-node-success,
 .diagram-layer {
-  fill: rgba(16, 185, 129, 0.08);
-  stroke: rgba(16, 185, 129, 0.8);
+  fill: #F0FDF4;
+  stroke: #34D399;
 }
 
 .diagram-arrow {
   fill: none;
-  stroke: rgba(255, 255, 255, 0.74);
-  stroke-width: 1.7;
+  stroke: #64748B;
+  stroke-width: 1.5;
   stroke-linecap: round;
-}
-
-.diagram-arrow.dashed {
-  stroke-dasharray: 5 4;
 }
 
 .aws-boundary,
@@ -679,37 +683,6 @@ svg {
   stroke: rgba(245, 158, 11, 0.88);
   stroke-width: 1.5;
   stroke-linejoin: round;
-}
-
-.project-diagram .flow-step {
-  transition: transform var(--transition), filter var(--transition), opacity var(--transition);
-  transform-origin: center;
-}
-
-.project-card:hover .project-diagram .flow-step {
-  animation: pulse-step 2.4s linear infinite;
-}
-
-.project-card:hover .project-diagram .flow-step:nth-child(2n) {
-  animation-delay: 0.18s;
-}
-
-.project-card:hover .project-diagram .flow-step:nth-child(3n) {
-  animation-delay: 0.36s;
-}
-
-@keyframes pulse-step {
-  0%,
-  100% {
-    opacity: 0.85;
-    filter: drop-shadow(0 0 0 rgba(245, 158, 11, 0));
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.24));
-    transform: scale(1.03);
-  }
 }
 
 .text-link {
@@ -1212,13 +1185,6 @@ svg {
     font-size: 0.76rem;
   }
 
-  .project-diagram text {
-    font-size: 9px;
-  }
-
-  .project-diagram .diagram-title {
-    font-size: 11px;
-  }
 }
 
 /* Evidence Portfolio Grid */

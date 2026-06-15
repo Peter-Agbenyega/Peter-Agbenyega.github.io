@@ -249,41 +249,54 @@
             <div class="project-grid">
               <article class="project-card reveal">
                 <div class="project-card-top border-electric"></div>
-                <div class="project-diagram" data-diagram="resilientops">
-                  <svg viewBox="0 0 460 280" aria-label="Secure cloud baseline architecture diagram">
+                <div class="project-diagram" data-diagram="secure-cloud-baseline">
+                  <svg viewBox="0 0 480 300" aria-label="Secure cloud baseline architecture diagram">
                     <defs>
-                      <marker id="arrow-bl" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="rgba(255,255,255,0.6)" /></marker>
+                      <marker id="arrow-bl" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                        <path d="M0,0 L8,3 L0,6" fill="#64748B" />
+                      </marker>
+                      <filter id="shadow-bl" x="-10%" y="-10%" width="120%" height="130%">
+                        <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#CBD5E1" flood-opacity="0.6"/>
+                      </filter>
                     </defs>
-                    <text class="diagram-title" x="20" y="22">Secure Cloud Baseline</text>
-                    <rect x="14" y="32" width="432" height="236" rx="14" fill="none" stroke="rgba(148,163,184,0.25)" stroke-width="1.2" stroke-dasharray="6 4" />
-                    <text class="diagram-label" x="24" y="48">AWS Account Boundary</text>
-                    <rect class="diagram-node diagram-node-gold flow-step" x="20" y="60" width="72" height="36" rx="10"></rect>
-                    <rect class="diagram-node diagram-node-gold flow-step" x="116" y="60" width="86" height="36" rx="10"></rect>
-                    <rect class="diagram-node flow-step" x="226" y="60" width="88" height="36" rx="10"></rect>
-                    <rect class="diagram-node flow-step" x="338" y="60" width="96" height="36" rx="10"></rect>
-                    <rect class="diagram-node diagram-node-success flow-step" x="80" y="130" width="130" height="40" rx="12"></rect>
-                    <rect class="diagram-node diagram-node-success flow-step" x="240" y="130" width="140" height="40" rx="12"></rect>
-                    <rect class="diagram-layer flow-step" x="40" y="206" width="380" height="30" rx="12"></rect>
-                    <text x="36" y="82">Users</text>
-                    <text x="126" y="82">WAF / Load Balancer</text>
-                    <text x="240" y="82">Public Subnet</text>
-                    <text x="356" y="82">Private App Tier</text>
-                    <text x="112" y="154">Data Tier</text>
-                    <text x="265" y="154">Logging / Monitoring</text>
-                    <text x="120" y="225">Security Evidence Review</text>
-                    <path class="diagram-arrow" d="M92 78 H116" marker-end="url(#arrow-bl)"></path>
-                    <path class="diagram-arrow" d="M202 78 H226" marker-end="url(#arrow-bl)"></path>
-                    <path class="diagram-arrow" d="M314 78 H338" marker-end="url(#arrow-bl)"></path>
-                    <path class="diagram-arrow" d="M270 96 V130" marker-end="url(#arrow-bl)"></path>
-                    <path class="diagram-arrow" d="M386 96 V130" marker-end="url(#arrow-bl)"></path>
-                    <path class="diagram-arrow" d="M210 150 H240" marker-end="url(#arrow-bl)"></path>
-                    <path class="diagram-arrow" d="M145 170 V206" marker-end="url(#arrow-bl)"></path>
-                    <path class="diagram-arrow" d="M310 170 V206" marker-end="url(#arrow-bl)"></path>
+                    <!-- Title -->
+                    <text class="diagram-title" x="16" y="20">Secure Cloud Baseline</text>
+                    <!-- Outer boundary -->
+                    <rect x="12" y="30" width="456" height="258" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2" stroke-dasharray="6 4"/>
+                    <text class="diagram-label" x="22" y="46" font-style="italic">AWS Account Boundary</text>
+                    <!-- Row 1 nodes: Users, WAF/LB, Public Subnet, Private App Tier -->
+                    <rect class="diagram-node diagram-node-gold flow-step" filter="url(#shadow-bl)" x="22" y="58" width="80" height="34" rx="8"/>
+                    <text x="62" y="79" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Users</text>
+                    <rect class="diagram-node diagram-node-gold flow-step" filter="url(#shadow-bl)" x="118" y="58" width="96" height="34" rx="8"/>
+                    <text x="166" y="79" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">WAF / Load Balancer</text>
+                    <rect class="diagram-node flow-step" filter="url(#shadow-bl)" x="232" y="58" width="96" height="34" rx="8"/>
+                    <text x="280" y="79" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Public Subnet</text>
+                    <rect class="diagram-node flow-step" filter="url(#shadow-bl)" x="346" y="58" width="106" height="34" rx="8"/>
+                    <text x="399" y="79" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Private App Tier</text>
+                    <!-- Row 1 arrows -->
+                    <path class="diagram-arrow" d="M102 75 H118" marker-end="url(#arrow-bl)"/>
+                    <path class="diagram-arrow" d="M214 75 H232" marker-end="url(#arrow-bl)"/>
+                    <path class="diagram-arrow" d="M328 75 H346" marker-end="url(#arrow-bl)"/>
+                    <!-- Row 2 nodes: Data Tier, Logging / Monitoring -->
+                    <rect class="diagram-node diagram-node-success flow-step" filter="url(#shadow-bl)" x="88" y="130" width="136" height="36" rx="8"/>
+                    <text x="156" y="152" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Data Tier</text>
+                    <rect class="diagram-node diagram-node-success flow-step" filter="url(#shadow-bl)" x="252" y="130" width="152" height="36" rx="8"/>
+                    <text x="328" y="152" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Logging / Monitoring</text>
+                    <!-- Row 2 arrows down from row 1 -->
+                    <path class="diagram-arrow" d="M280 92 V130" marker-end="url(#arrow-bl)"/>
+                    <path class="diagram-arrow" d="M399 92 V130" marker-end="url(#arrow-bl)"/>
+                    <path class="diagram-arrow" d="M224 148 H252" marker-end="url(#arrow-bl)"/>
+                    <!-- Row 3: Security Evidence Review layer -->
+                    <rect class="diagram-layer flow-step" filter="url(#shadow-bl)" x="44" y="202" width="390" height="34" rx="10"/>
+                    <text x="239" y="223" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Security Evidence Review</text>
+                    <!-- Arrows down to layer -->
+                    <path class="diagram-arrow" d="M156 166 V202" marker-end="url(#arrow-bl)"/>
+                    <path class="diagram-arrow" d="M328 166 V202" marker-end="url(#arrow-bl)"/>
                   </svg>
                 </div>
                 <h3>Secure Cloud Baseline Architecture</h3>
                 <p class="project-alias">Repository: ResilientOps-Cloud-Architecture</p>
-                <p class="diagram-caption">Reference architecture diagram — educational/public-interest use.</p>
+                <p class="diagram-caption">Draw.io-style reference diagram for public technical documentation.</p>
                 <p>
                   Terraform-based AWS baseline showing segmented networking, controlled ingress,
                   private application placement, data-tier separation, and centralized logging.
@@ -304,45 +317,57 @@
 
               <article class="project-card reveal">
                 <div class="project-card-top border-success"></div>
-                <div class="project-diagram" data-diagram="clustershield">
-                  <svg viewBox="0 0 460 310" aria-label="Kubernetes security reference architecture diagram">
+                <div class="project-diagram" data-diagram="kubernetes-security-reference">
+                  <svg viewBox="0 0 480 320" aria-label="Kubernetes security reference architecture diagram">
                     <defs>
-                      <marker id="arrow-k8s" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="rgba(255,255,255,0.6)" /></marker>
+                      <marker id="arrow-k8s" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                        <path d="M0,0 L8,3 L0,6" fill="#64748B" />
+                      </marker>
+                      <filter id="shadow-k8s" x="-10%" y="-10%" width="120%" height="130%">
+                        <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#CBD5E1" flood-opacity="0.6"/>
+                      </filter>
                     </defs>
-                    <text class="diagram-title" x="20" y="22">Kubernetes Security Reference</text>
-                    <rect x="14" y="32" width="432" height="268" rx="14" fill="none" stroke="rgba(148,163,184,0.25)" stroke-width="1.2" stroke-dasharray="6 4" />
-                    <text class="diagram-label" x="24" y="48">Kubernetes Platform Boundary</text>
-                    <rect class="diagram-node diagram-node-gold flow-step" x="20" y="60" width="72" height="34" rx="10"></rect>
-                    <rect class="diagram-node diagram-node-gold flow-step" x="112" y="60" width="92" height="34" rx="10"></rect>
-                    <rect class="diagram-node flow-step" x="224" y="60" width="60" height="34" rx="10"></rect>
-                    <rect class="diagram-node flow-step" x="304" y="60" width="90" height="34" rx="10"></rect>
-                    <rect class="diagram-node diagram-node-gold flow-step" x="60" y="122" width="110" height="36" rx="10"></rect>
-                    <rect class="diagram-node flow-step" x="196" y="122" width="118" height="36" rx="10"></rect>
-                    <rect class="diagram-node flow-step" x="340" y="122" width="96" height="36" rx="10"></rect>
-                    <rect class="diagram-node diagram-node-success flow-step" x="80" y="192" width="180" height="36" rx="12"></rect>
-                    <rect class="diagram-layer flow-step" x="40" y="256" width="380" height="28" rx="12"></rect>
-                    <text x="34" y="81">Developer</text>
-                    <text x="120" y="81">Source Control</text>
-                    <text x="235" y="81">CI/CD</text>
-                    <text x="314" y="81">Image Scan Gate</text>
-                    <text x="68" y="144">Container Registry</text>
-                    <text x="206" y="144">K8s Control Plane</text>
-                    <text x="350" y="144">Private Workers</text>
-                    <text x="102" y="214">Namespace / RBAC / NetworkPolicy</text>
-                    <text x="138" y="274">Observability / Logging</text>
-                    <path class="diagram-arrow" d="M92 77 H112" marker-end="url(#arrow-k8s)"></path>
-                    <path class="diagram-arrow" d="M204 77 H224" marker-end="url(#arrow-k8s)"></path>
-                    <path class="diagram-arrow" d="M284 77 H304" marker-end="url(#arrow-k8s)"></path>
-                    <path class="diagram-arrow" d="M349 94 V122" marker-end="url(#arrow-k8s)"></path>
-                    <path class="diagram-arrow" d="M170 140 H196" marker-end="url(#arrow-k8s)"></path>
-                    <path class="diagram-arrow" d="M314 140 H340" marker-end="url(#arrow-k8s)"></path>
-                    <path class="diagram-arrow" d="M255 158 V192" marker-end="url(#arrow-k8s)"></path>
-                    <path class="diagram-arrow" d="M388 158 V192" marker-end="url(#arrow-k8s)"></path>
-                    <path class="diagram-arrow" d="M170 228 V256" marker-end="url(#arrow-k8s)"></path>
+                    <text class="diagram-title" x="16" y="20">Kubernetes Security Reference</text>
+                    <rect x="12" y="30" width="456" height="278" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2" stroke-dasharray="6 4"/>
+                    <text class="diagram-label" x="22" y="46" font-style="italic">Kubernetes Platform Boundary</text>
+                    <!-- Row 1 -->
+                    <rect class="diagram-node diagram-node-gold flow-step" filter="url(#shadow-k8s)" x="22" y="58" width="78" height="34" rx="8"/>
+                    <text x="61" y="79" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Developer</text>
+                    <rect class="diagram-node diagram-node-gold flow-step" filter="url(#shadow-k8s)" x="116" y="58" width="96" height="34" rx="8"/>
+                    <text x="164" y="79" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Source Control</text>
+                    <rect class="diagram-node flow-step" filter="url(#shadow-k8s)" x="228" y="58" width="64" height="34" rx="8"/>
+                    <text x="260" y="79" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">CI/CD</text>
+                    <rect class="diagram-node flow-step" filter="url(#shadow-k8s)" x="308" y="58" width="104" height="34" rx="8"/>
+                    <text x="360" y="79" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Image Scan Gate</text>
+                    <!-- Row 1 arrows -->
+                    <path class="diagram-arrow" d="M100 75 H116" marker-end="url(#arrow-k8s)"/>
+                    <path class="diagram-arrow" d="M212 75 H228" marker-end="url(#arrow-k8s)"/>
+                    <path class="diagram-arrow" d="M292 75 H308" marker-end="url(#arrow-k8s)"/>
+                    <!-- Row 2 -->
+                    <rect class="diagram-node diagram-node-gold flow-step" filter="url(#shadow-k8s)" x="56" y="128" width="116" height="34" rx="8"/>
+                    <text x="114" y="149" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Container Registry</text>
+                    <rect class="diagram-node flow-step" filter="url(#shadow-k8s)" x="196" y="128" width="116" height="34" rx="8"/>
+                    <text x="254" y="149" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">K8s Control Plane</text>
+                    <rect class="diagram-node flow-step" filter="url(#shadow-k8s)" x="336" y="128" width="100" height="34" rx="8"/>
+                    <text x="386" y="149" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Private Workers</text>
+                    <!-- Row 2 arrows -->
+                    <path class="diagram-arrow" d="M360 92 V128" marker-end="url(#arrow-k8s)"/>
+                    <path class="diagram-arrow" d="M172 145 H196" marker-end="url(#arrow-k8s)"/>
+                    <path class="diagram-arrow" d="M312 145 H336" marker-end="url(#arrow-k8s)"/>
+                    <!-- Row 3 -->
+                    <rect class="diagram-node diagram-node-success flow-step" filter="url(#shadow-k8s)" x="90" y="198" width="200" height="34" rx="8"/>
+                    <text x="190" y="219" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Namespace / RBAC / NetworkPolicy</text>
+                    <!-- Row 3 arrow -->
+                    <path class="diagram-arrow" d="M254 162 V198" marker-end="url(#arrow-k8s)"/>
+                    <path class="diagram-arrow" d="M386 162 V198" marker-end="url(#arrow-k8s)"/>
+                    <!-- Row 4 layer -->
+                    <rect class="diagram-layer flow-step" filter="url(#shadow-k8s)" x="44" y="266" width="390" height="30" rx="10"/>
+                    <text x="239" y="285" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Observability / Logging</text>
+                    <path class="diagram-arrow" d="M190 232 V266" marker-end="url(#arrow-k8s)"/>
                   </svg>
                 </div>
                 <h3>Kubernetes Security Reference Architecture</h3>
-                <p class="diagram-caption">Reference architecture diagram — educational/public-interest use.</p>
+                <p class="diagram-caption">Draw.io-style reference diagram for public technical documentation.</p>
                 <p>
                   <strong>Problem statement.</strong> Kubernetes platforms introduce avoidable risk
                   when cluster access, workload boundaries, and image controls are not defined from
@@ -373,39 +398,50 @@
 
               <article class="project-card reveal">
                 <div class="project-card-top border-gold"></div>
-                <div class="project-diagram" data-diagram="cloudshield">
-                  <svg viewBox="0 0 460 280" aria-label="Cloud security controls framework diagram">
+                <div class="project-diagram" data-diagram="cloud-security-controls-framework">
+                  <svg viewBox="0 0 480 300" aria-label="Cloud security controls framework diagram">
                     <defs>
-                      <marker id="arrow-csf" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="rgba(255,255,255,0.6)" /></marker>
+                      <marker id="arrow-csf" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                        <path d="M0,0 L8,3 L0,6" fill="#64748B" />
+                      </marker>
+                      <filter id="shadow-csf" x="-10%" y="-10%" width="120%" height="130%">
+                        <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#CBD5E1" flood-opacity="0.6"/>
+                      </filter>
                     </defs>
-                    <text class="diagram-title" x="20" y="22">Cloud Security Controls Framework</text>
-                    <rect x="14" y="32" width="432" height="238" rx="14" fill="none" stroke="rgba(148,163,184,0.25)" stroke-width="1.2" stroke-dasharray="6 4" />
-                    <text class="diagram-label" x="24" y="48">Security Controls Layer</text>
-                    <rect class="diagram-node diagram-node-gold flow-step" x="20" y="60" width="92" height="36" rx="10"></rect>
-                    <rect class="diagram-node flow-step" x="134" y="60" width="100" height="36" rx="10"></rect>
-                    <rect class="diagram-node flow-step" x="256" y="60" width="82" height="36" rx="10"></rect>
-                    <rect class="diagram-node diagram-node-success flow-step" x="360" y="60" width="76" height="36" rx="10"></rect>
-                    <rect class="diagram-node diagram-node-success flow-step" x="60" y="132" width="140" height="38" rx="12"></rect>
-                    <rect class="diagram-node diagram-node-success flow-step" x="230" y="132" width="146" height="38" rx="12"></rect>
-                    <rect class="diagram-layer flow-step" x="40" y="206" width="380" height="30" rx="12"></rect>
-                    <text x="32" y="82">Identity &amp; Access</text>
-                    <text x="144" y="82">Network Controls</text>
-                    <text x="266" y="82">Encryption</text>
-                    <text x="368" y="82">Logging</text>
-                    <text x="78" y="155">Detection / Response</text>
-                    <text x="248" y="155">Compliance Mapping</text>
-                    <text x="120" y="225">Remediation Backlog / Evidence</text>
-                    <path class="diagram-arrow" d="M112 78 H134" marker-end="url(#arrow-csf)"></path>
-                    <path class="diagram-arrow" d="M234 78 H256" marker-end="url(#arrow-csf)"></path>
-                    <path class="diagram-arrow" d="M338 78 H360" marker-end="url(#arrow-csf)"></path>
-                    <path class="diagram-arrow" d="M398 96 V132" marker-end="url(#arrow-csf)"></path>
-                    <path class="diagram-arrow" d="M200 151 H230" marker-end="url(#arrow-csf)"></path>
-                    <path class="diagram-arrow" d="M130 170 V206" marker-end="url(#arrow-csf)"></path>
-                    <path class="diagram-arrow" d="M303 170 V206" marker-end="url(#arrow-csf)"></path>
+                    <text class="diagram-title" x="16" y="20">Cloud Security Controls Framework</text>
+                    <rect x="12" y="30" width="456" height="258" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2" stroke-dasharray="6 4"/>
+                    <text class="diagram-label" x="22" y="46" font-style="italic">Security Controls Layer</text>
+                    <!-- Row 1: Identity, Network, Encryption -->
+                    <rect class="diagram-node diagram-node-gold flow-step" filter="url(#shadow-csf)" x="22" y="58" width="100" height="34" rx="8"/>
+                    <text x="72" y="79" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Identity &amp; Access</text>
+                    <rect class="diagram-node flow-step" filter="url(#shadow-csf)" x="140" y="58" width="100" height="34" rx="8"/>
+                    <text x="190" y="79" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Network Controls</text>
+                    <rect class="diagram-node flow-step" filter="url(#shadow-csf)" x="258" y="58" width="88" height="34" rx="8"/>
+                    <text x="302" y="79" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Encryption</text>
+                    <rect class="diagram-node flow-step" filter="url(#shadow-csf)" x="364" y="58" width="84" height="34" rx="8"/>
+                    <text x="406" y="79" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Logging</text>
+                    <!-- Row 1 arrows -->
+                    <path class="diagram-arrow" d="M122 75 H140" marker-end="url(#arrow-csf)"/>
+                    <path class="diagram-arrow" d="M240 75 H258" marker-end="url(#arrow-csf)"/>
+                    <path class="diagram-arrow" d="M346 75 H364" marker-end="url(#arrow-csf)"/>
+                    <!-- Row 2 -->
+                    <rect class="diagram-node diagram-node-success flow-step" filter="url(#shadow-csf)" x="60" y="138" width="148" height="34" rx="8"/>
+                    <text x="134" y="159" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Detection / Response</text>
+                    <rect class="diagram-node flow-step" filter="url(#shadow-csf)" x="236" y="138" width="148" height="34" rx="8"/>
+                    <text x="310" y="159" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Compliance Mapping</text>
+                    <!-- Row 2 arrows -->
+                    <path class="diagram-arrow" d="M302 92 V138" marker-end="url(#arrow-csf)"/>
+                    <path class="diagram-arrow" d="M406 92 V138" marker-end="url(#arrow-csf)"/>
+                    <path class="diagram-arrow" d="M208 155 H236" marker-end="url(#arrow-csf)"/>
+                    <!-- Row 3 layer -->
+                    <rect class="diagram-layer flow-step" filter="url(#shadow-csf)" x="44" y="210" width="390" height="34" rx="10"/>
+                    <text x="239" y="231" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Remediation Backlog / Evidence</text>
+                    <path class="diagram-arrow" d="M134 172 V210" marker-end="url(#arrow-csf)"/>
+                    <path class="diagram-arrow" d="M310 172 V210" marker-end="url(#arrow-csf)"/>
                   </svg>
                 </div>
                 <h3>Cloud Security Controls Framework</h3>
-                <p class="diagram-caption">Reference architecture diagram — educational/public-interest use.</p>
+                <p class="diagram-caption">Draw.io-style reference diagram for public technical documentation.</p>
                 <p>
                   <strong>Problem statement.</strong> Cloud security programs often struggle to show
                   how identity, network, encryption, detection, and compliance controls connect as a
@@ -436,43 +472,52 @@
 
               <article class="project-card reveal">
                 <div class="project-card-top border-electric"></div>
-                <div class="project-diagram" data-diagram="multizone">
-                  <svg viewBox="0 0 460 300" aria-label="Multi-region cloud resilience architecture diagram">
+                <div class="project-diagram" data-diagram="multi-region-cloud-resilience">
+                  <svg viewBox="0 0 480 300" aria-label="Multi-Region cloud resilience architecture diagram">
                     <defs>
-                      <marker id="arrow-mr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="rgba(255,255,255,0.6)" /></marker>
+                      <marker id="arrow-mr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                        <path d="M0,0 L8,3 L0,6" fill="#64748B" />
+                      </marker>
+                      <filter id="shadow-mr" x="-10%" y="-10%" width="120%" height="130%">
+                        <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#CBD5E1" flood-opacity="0.6"/>
+                      </filter>
                     </defs>
-                    <text class="diagram-title" x="20" y="22">Multi-Region Resilience</text>
-                    <rect x="14" y="32" width="432" height="258" rx="14" fill="none" stroke="rgba(148,163,184,0.25)" stroke-width="1.2" stroke-dasharray="6 4" />
-                    <text class="diagram-label" x="24" y="48">Regional Continuity Boundary</text>
-                    <rect class="diagram-node diagram-node-gold flow-step" x="20" y="60" width="66" height="36" rx="10"></rect>
-                    <rect class="diagram-node diagram-node-gold flow-step" x="112" y="60" width="110" height="36" rx="10"></rect>
-                    <rect class="diagram-node flow-step" x="248" y="60" width="100" height="36" rx="10"></rect>
-                    <rect class="diagram-node flow-step" x="120" y="128" width="130" height="38" rx="12"></rect>
-                    <rect class="diagram-node diagram-node-success flow-step" x="280" y="128" width="110" height="38" rx="12"></rect>
-                    <rect class="diagram-node diagram-node-success flow-step" x="60" y="198" width="100" height="36" rx="12"></rect>
-                    <rect class="diagram-node diagram-node-success flow-step" x="188" y="198" width="80" height="36" rx="12"></rect>
-                    <rect class="diagram-layer flow-step" x="40" y="260" width="380" height="26" rx="12"></rect>
-                    <text x="34" y="82">Users</text>
-                    <text x="120" y="82">DNS / Traffic Routing</text>
-                    <text x="264" y="82">Primary Region</text>
-                    <text x="135" y="151">Replication / Backups</text>
-                    <text x="295" y="151">Recovery Region</text>
-                    <text x="72" y="220">Health Checks</text>
-                    <text x="205" y="220">Alerting</text>
-                    <text x="130" y="277">Failover Runbook</text>
-                    <path class="diagram-arrow" d="M86 78 H112" marker-end="url(#arrow-mr)"></path>
-                    <path class="diagram-arrow" d="M222 78 H248" marker-end="url(#arrow-mr)"></path>
-                    <path class="diagram-arrow" d="M298 96 V128" marker-end="url(#arrow-mr)"></path>
-                    <path class="diagram-arrow dashed" d="M250 147 H280" marker-end="url(#arrow-mr)"></path>
-                    <path class="diagram-arrow" d="M335 166 V198" marker-end="url(#arrow-mr)"></path>
-                    <path class="diagram-arrow" d="M185 166 V198" marker-end="url(#arrow-mr)"></path>
-                    <path class="diagram-arrow" d="M160 216 H188" marker-end="url(#arrow-mr)"></path>
-                    <path class="diagram-arrow" d="M110 234 V260" marker-end="url(#arrow-mr)"></path>
-                    <path class="diagram-arrow" d="M228 234 V260" marker-end="url(#arrow-mr)"></path>
+                    <text class="diagram-title" x="16" y="20">Multi-Region Resilience</text>
+                    <rect x="12" y="30" width="456" height="258" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2" stroke-dasharray="6 4"/>
+                    <text class="diagram-label" x="22" y="46" font-style="italic">Regional Continuity Boundary</text>
+                    <!-- Row 1: Users, DNS -->
+                    <rect class="diagram-node diagram-node-gold flow-step" filter="url(#shadow-mr)" x="22" y="58" width="72" height="34" rx="8"/>
+                    <text x="58" y="79" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Users</text>
+                    <rect class="diagram-node diagram-node-gold flow-step" filter="url(#shadow-mr)" x="116" y="58" width="128" height="34" rx="8"/>
+                    <text x="180" y="79" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">DNS / Traffic Routing</text>
+                    <!-- Row 1 arrows -->
+                    <path class="diagram-arrow" d="M94 75 H116" marker-end="url(#arrow-mr)"/>
+                    <!-- Row 2: Primary Region, Replication, Recovery Region -->
+                    <rect class="diagram-node diagram-node-success flow-step" filter="url(#shadow-mr)" x="22" y="130" width="120" height="34" rx="8"/>
+                    <text x="82" y="151" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Primary Region</text>
+                    <rect class="diagram-node flow-step" filter="url(#shadow-mr)" x="170" y="130" width="130" height="34" rx="8"/>
+                    <text x="235" y="151" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Replication / Backups</text>
+                    <rect class="diagram-node diagram-node-success flow-step" filter="url(#shadow-mr)" x="328" y="130" width="120" height="34" rx="8"/>
+                    <text x="388" y="151" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Recovery Region</text>
+                    <!-- Row 2 arrows -->
+                    <path class="diagram-arrow" d="M180 92 V130" marker-end="url(#arrow-mr)"/>
+                    <path class="diagram-arrow" d="M142 147 H170" marker-end="url(#arrow-mr)"/>
+                    <path class="diagram-arrow" d="M300 147 H328" marker-end="url(#arrow-mr)"/>
+                    <!-- Row 3: Health Checks, Alerting, Failover -->
+                    <rect class="diagram-node flow-step" filter="url(#shadow-mr)" x="30" y="204" width="106" height="34" rx="8"/>
+                    <text x="83" y="225" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Health Checks</text>
+                    <rect class="diagram-node flow-step" filter="url(#shadow-mr)" x="162" y="204" width="90" height="34" rx="8"/>
+                    <text x="207" y="225" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Alerting</text>
+                    <rect class="diagram-node diagram-node-success flow-step" filter="url(#shadow-mr)" x="280" y="204" width="140" height="34" rx="8"/>
+                    <text x="350" y="225" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Failover Runbook</text>
+                    <!-- Row 3 arrows -->
+                    <path class="diagram-arrow" d="M82 164 V204" marker-end="url(#arrow-mr)"/>
+                    <path class="diagram-arrow" d="M235 164 V204" marker-end="url(#arrow-mr)"/>
+                    <path class="diagram-arrow" d="M388 164 V204" marker-end="url(#arrow-mr)"/>
                   </svg>
                 </div>
                 <h3>Multi-Region Cloud Resilience Architecture</h3>
-                <p class="diagram-caption">Reference architecture diagram — educational/public-interest use.</p>
+                <p class="diagram-caption">Draw.io-style reference diagram for public technical documentation.</p>
                 <p>
                   <strong>Problem statement.</strong> Critical workloads cannot rely on a single
                   region when continuity planning, replication, and recovery procedures are expected.
@@ -502,41 +547,51 @@
 
               <article class="project-card reveal">
                 <div class="project-card-top border-gold"></div>
-                <div class="project-diagram" data-diagram="secureinfra">
-                  <svg viewBox="0 0 460 280" aria-label="AWS Terraform security baseline diagram">
+                <div class="project-diagram" data-diagram="aws-terraform-security-baseline">
+                  <svg viewBox="0 0 480 300" aria-label="AWS Terraform security baseline for SMB environments diagram">
                     <defs>
-                      <marker id="arrow-tf" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="rgba(255,255,255,0.6)" /></marker>
+                      <marker id="arrow-tf" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                        <path d="M0,0 L8,3 L0,6" fill="#64748B" />
+                      </marker>
+                      <filter id="shadow-tf" x="-10%" y="-10%" width="120%" height="130%">
+                        <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#CBD5E1" flood-opacity="0.6"/>
+                      </filter>
                     </defs>
-                    <text class="diagram-title" x="20" y="22">AWS Terraform Security Baseline</text>
-                    <rect x="14" y="32" width="432" height="238" rx="14" fill="none" stroke="rgba(148,163,184,0.25)" stroke-width="1.2" stroke-dasharray="6 4" />
-                    <text class="diagram-label" x="24" y="48">Monitoring and Evidence Layer</text>
-                    <rect class="diagram-node diagram-node-gold flow-step" x="20" y="60" width="82" height="36" rx="10"></rect>
-                    <rect class="diagram-node flow-step" x="126" y="60" width="96" height="36" rx="10"></rect>
-                    <rect class="diagram-node flow-step" x="246" y="60" width="90" height="36" rx="10"></rect>
-                    <rect class="diagram-node diagram-node-success flow-step" x="360" y="60" width="74" height="36" rx="10"></rect>
-                    <rect class="diagram-node diagram-node-success flow-step" x="60" y="134" width="146" height="38" rx="12"></rect>
-                    <rect class="diagram-node diagram-node-success flow-step" x="236" y="134" width="140" height="38" rx="12"></rect>
-                    <rect class="diagram-layer flow-step" x="40" y="208" width="380" height="28" rx="12"></rect>
-                    <text x="32" y="82">Terraform</text>
-                    <text x="139" y="82">IAM / VPC</text>
-                    <text x="258" y="82">KMS / State</text>
-                    <text x="374" y="82">RDS</text>
-                    <text x="78" y="157">Checkov / Gitleaks</text>
-                    <text x="260" y="157">Logging / Evidence</text>
-                    <text x="120" y="226">SMB-Oriented Control Baseline</text>
-                    <path class="diagram-arrow" d="M102 78 H126" marker-end="url(#arrow-tf)"></path>
-                    <path class="diagram-arrow" d="M222 78 H246" marker-end="url(#arrow-tf)"></path>
-                    <path class="diagram-arrow" d="M336 78 H360" marker-end="url(#arrow-tf)"></path>
-                    <path class="diagram-arrow" d="M291 96 V134" marker-end="url(#arrow-tf)"></path>
-                    <path class="diagram-arrow" d="M397 96 V134" marker-end="url(#arrow-tf)"></path>
-                    <path class="diagram-arrow" d="M206 153 H236" marker-end="url(#arrow-tf)"></path>
-                    <path class="diagram-arrow" d="M133 172 V208" marker-end="url(#arrow-tf)"></path>
-                    <path class="diagram-arrow" d="M306 172 V208" marker-end="url(#arrow-tf)"></path>
+                    <text class="diagram-title" x="16" y="20">AWS Terraform Security Baseline</text>
+                    <rect x="12" y="30" width="456" height="258" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2" stroke-dasharray="6 4"/>
+                    <text class="diagram-label" x="22" y="46" font-style="italic">Monitoring and Evidence Layer</text>
+                    <!-- Row 1 -->
+                    <rect class="diagram-node diagram-node-gold flow-step" filter="url(#shadow-tf)" x="22" y="58" width="88" height="34" rx="8"/>
+                    <text x="66" y="79" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Terraform</text>
+                    <rect class="diagram-node flow-step" filter="url(#shadow-tf)" x="128" y="58" width="96" height="34" rx="8"/>
+                    <text x="176" y="79" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">IAM / VPC</text>
+                    <rect class="diagram-node flow-step" filter="url(#shadow-tf)" x="242" y="58" width="96" height="34" rx="8"/>
+                    <text x="290" y="79" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">KMS / State</text>
+                    <rect class="diagram-node diagram-node-success flow-step" filter="url(#shadow-tf)" x="356" y="58" width="76" height="34" rx="8"/>
+                    <text x="394" y="79" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">RDS</text>
+                    <!-- Row 1 arrows -->
+                    <path class="diagram-arrow" d="M110 75 H128" marker-end="url(#arrow-tf)"/>
+                    <path class="diagram-arrow" d="M224 75 H242" marker-end="url(#arrow-tf)"/>
+                    <path class="diagram-arrow" d="M338 75 H356" marker-end="url(#arrow-tf)"/>
+                    <!-- Row 2 -->
+                    <rect class="diagram-node diagram-node-gold flow-step" filter="url(#shadow-tf)" x="60" y="140" width="140" height="34" rx="8"/>
+                    <text x="130" y="161" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Checkov / Gitleaks</text>
+                    <rect class="diagram-node diagram-node-success flow-step" filter="url(#shadow-tf)" x="240" y="140" width="148" height="34" rx="8"/>
+                    <text x="314" y="161" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Logging / Evidence</text>
+                    <!-- Row 2 arrows -->
+                    <path class="diagram-arrow" d="M176 92 V140" marker-end="url(#arrow-tf)"/>
+                    <path class="diagram-arrow" d="M290 92 V140" marker-end="url(#arrow-tf)"/>
+                    <path class="diagram-arrow" d="M200 157 H240" marker-end="url(#arrow-tf)"/>
+                    <!-- Row 3 layer -->
+                    <rect class="diagram-layer flow-step" filter="url(#shadow-tf)" x="44" y="212" width="390" height="34" rx="10"/>
+                    <text x="239" y="233" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">SMB-Oriented Control Baseline</text>
+                    <path class="diagram-arrow" d="M130 174 V212" marker-end="url(#arrow-tf)"/>
+                    <path class="diagram-arrow" d="M314 174 V212" marker-end="url(#arrow-tf)"/>
                   </svg>
                 </div>
                 <h3>AWS Terraform Security Baseline for SMB Environments</h3>
                 <p class="project-alias">Repository: AWS-Terraform-Secure-Infrastructure</p>
-                <p class="diagram-caption">Reference architecture diagram — educational/public-interest use.</p>
+                <p class="diagram-caption">Draw.io-style reference diagram for public technical documentation.</p>
                 <p>
                   Security-focused AWS baseline for small and medium business environments with
                   mapped controls across IAM, encryption, Terraform state protection, and
@@ -558,48 +613,59 @@
 
               <article class="project-card reveal">
                 <div class="project-card-top border-success"></div>
-                <div class="project-diagram" data-diagram="dod">
+                <div class="project-diagram" data-diagram="secure-devsecops-pipeline">
                   <svg viewBox="0 0 480 300" aria-label="Secure DevSecOps pipeline reference architecture diagram">
                     <defs>
-                      <marker id="arrow-dso" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="rgba(255,255,255,0.6)" /></marker>
+                      <marker id="arrow-dso" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                        <path d="M0,0 L8,3 L0,6" fill="#64748B" />
+                      </marker>
+                      <filter id="shadow-dso" x="-10%" y="-10%" width="120%" height="130%">
+                        <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#CBD5E1" flood-opacity="0.6"/>
+                      </filter>
                     </defs>
-                    <text class="diagram-title" x="20" y="22">Secure DevSecOps Pipeline</text>
-                    <rect x="14" y="32" width="452" height="258" rx="14" fill="none" stroke="rgba(148,163,184,0.25)" stroke-width="1.2" stroke-dasharray="6 4" />
-                    <text class="diagram-label" x="24" y="48">Release Control Boundary</text>
-                    <rect class="diagram-node diagram-node-gold flow-step" x="18" y="60" width="66" height="34" rx="10"></rect>
-                    <rect class="diagram-node diagram-node-gold flow-step" x="104" y="60" width="78" height="34" rx="10"></rect>
-                    <rect class="diagram-node flow-step" x="202" y="60" width="76" height="34" rx="10"></rect>
-                    <rect class="diagram-node flow-step" x="298" y="60" width="72" height="34" rx="10"></rect>
-                    <rect class="diagram-node flow-step" x="390" y="60" width="66" height="34" rx="10"></rect>
-                    <rect class="diagram-node diagram-node-success flow-step" x="40" y="128" width="98" height="38" rx="12"></rect>
-                    <rect class="diagram-node diagram-node-gold flow-step" x="168" y="128" width="100" height="38" rx="12"></rect>
-                    <rect class="diagram-node diagram-node-success flow-step" x="298" y="128" width="120" height="38" rx="12"></rect>
-                    <rect class="diagram-layer flow-step" x="40" y="200" width="400" height="30" rx="12"></rect>
-                    <rect class="diagram-layer flow-step" x="80" y="252" width="320" height="26" rx="12"></rect>
-                    <text x="30" y="81">Source</text>
-                    <text x="112" y="81">Secret Scan</text>
-                    <text x="210" y="81">SAST / IaC</text>
-                    <text x="306" y="81">Dep Review</text>
-                    <text x="398" y="81">Build / Test</text>
-                    <text x="50" y="151">Container Scan</text>
-                    <text x="182" y="151">Approval Gate</text>
-                    <text x="310" y="151">Controlled Deploy</text>
-                    <text x="128" y="219">Evidence Collection / Audit Trail</text>
-                    <text x="140" y="269">Monitoring / Feedback</text>
-                    <path class="diagram-arrow" d="M84 77 H104" marker-end="url(#arrow-dso)"></path>
-                    <path class="diagram-arrow" d="M182 77 H202" marker-end="url(#arrow-dso)"></path>
-                    <path class="diagram-arrow" d="M278 77 H298" marker-end="url(#arrow-dso)"></path>
-                    <path class="diagram-arrow" d="M370 77 H390" marker-end="url(#arrow-dso)"></path>
-                    <path class="diagram-arrow" d="M423 94 V128" marker-end="url(#arrow-dso)"></path>
-                    <path class="diagram-arrow" d="M138 147 H168" marker-end="url(#arrow-dso)"></path>
-                    <path class="diagram-arrow" d="M268 147 H298" marker-end="url(#arrow-dso)"></path>
-                    <path class="diagram-arrow" d="M89 166 V200" marker-end="url(#arrow-dso)"></path>
-                    <path class="diagram-arrow" d="M358 166 V200" marker-end="url(#arrow-dso)"></path>
-                    <path class="diagram-arrow" d="M240 230 V252" marker-end="url(#arrow-dso)"></path>
+                    <text class="diagram-title" x="16" y="20">Secure DevSecOps Pipeline</text>
+                    <rect x="12" y="30" width="456" height="258" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2" stroke-dasharray="6 4"/>
+                    <text class="diagram-label" x="22" y="46" font-style="italic">Release Control Boundary</text>
+                    <!-- Row 1: Source, Secret Scan, SAST/IaC, Dep Review -->
+                    <rect class="diagram-node diagram-node-gold flow-step" filter="url(#shadow-dso)" x="18" y="58" width="68" height="34" rx="8"/>
+                    <text x="52" y="79" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Source</text>
+                    <rect class="diagram-node diagram-node-gold flow-step" filter="url(#shadow-dso)" x="102" y="58" width="88" height="34" rx="8"/>
+                    <text x="146" y="79" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Secret Scan</text>
+                    <rect class="diagram-node flow-step" filter="url(#shadow-dso)" x="206" y="58" width="82" height="34" rx="8"/>
+                    <text x="247" y="79" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">SAST / IaC</text>
+                    <rect class="diagram-node flow-step" filter="url(#shadow-dso)" x="304" y="58" width="84" height="34" rx="8"/>
+                    <text x="346" y="79" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Dep Review</text>
+                    <!-- Row 1 arrows -->
+                    <path class="diagram-arrow" d="M86 75 H102" marker-end="url(#arrow-dso)"/>
+                    <path class="diagram-arrow" d="M190 75 H206" marker-end="url(#arrow-dso)"/>
+                    <path class="diagram-arrow" d="M288 75 H304" marker-end="url(#arrow-dso)"/>
+                    <!-- Row 2: Build/Test, Container Scan, Approval Gate -->
+                    <rect class="diagram-node flow-step" filter="url(#shadow-dso)" x="40" y="138" width="96" height="34" rx="8"/>
+                    <text x="88" y="159" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Build / Test</text>
+                    <rect class="diagram-node diagram-node-gold flow-step" filter="url(#shadow-dso)" x="162" y="138" width="110" height="34" rx="8"/>
+                    <text x="217" y="159" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Container Scan</text>
+                    <rect class="diagram-node diagram-node-gold flow-step" filter="url(#shadow-dso)" x="298" y="138" width="106" height="34" rx="8"/>
+                    <text x="351" y="159" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Approval Gate</text>
+                    <!-- Row 2 arrows -->
+                    <path class="diagram-arrow" d="M346 92 V138" marker-end="url(#arrow-dso)"/>
+                    <path class="diagram-arrow" d="M136 155 H162" marker-end="url(#arrow-dso)"/>
+                    <path class="diagram-arrow" d="M272 155 H298" marker-end="url(#arrow-dso)"/>
+                    <!-- Row 3: Controlled Deploy, Evidence/Audit, Monitoring -->
+                    <rect class="diagram-node diagram-node-success flow-step" filter="url(#shadow-dso)" x="22" y="212" width="120" height="34" rx="8"/>
+                    <text x="82" y="233" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Controlled Deploy</text>
+                    <rect class="diagram-node flow-step" filter="url(#shadow-dso)" x="162" y="212" width="152" height="34" rx="8"/>
+                    <text x="238" y="233" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Evidence / Audit Trail</text>
+                    <rect class="diagram-node diagram-node-success flow-step" filter="url(#shadow-dso)" x="334" y="212" width="120" height="34" rx="8"/>
+                    <text x="394" y="233" text-anchor="middle" font-size="10" fill="#1E293B" font-family="JetBrains Mono,monospace" font-weight="600">Monitoring / Feedback</text>
+                    <!-- Row 3 arrows -->
+                    <path class="diagram-arrow" d="M88 172 V212" marker-end="url(#arrow-dso)"/>
+                    <path class="diagram-arrow" d="M351 172 V212" marker-end="url(#arrow-dso)"/>
+                    <path class="diagram-arrow" d="M142 229 H162" marker-end="url(#arrow-dso)"/>
+                    <path class="diagram-arrow" d="M314 229 H334" marker-end="url(#arrow-dso)"/>
                   </svg>
                 </div>
                 <h3>Secure DevSecOps Pipeline Reference Architecture</h3>
-                <p class="diagram-caption">Reference architecture diagram — educational/public-interest use.</p>
+                <p class="diagram-caption">Draw.io-style reference diagram for public technical documentation.</p>
                 <p>
                   <strong>Problem statement.</strong> Software delivery pipelines need review gates
                   that catch secrets exposure, insecure infrastructure changes, and vulnerable build
@@ -645,9 +711,9 @@
               <h2>The DevSecOps Security Pipeline</h2>
               <p>
                 The diagram below groups Peter's public workflow into eight core gates for
-                readability. The underlying GitHub Actions implementation in the flagship DoD
-                pipeline currently spans 15 total stages from validation through approved
-                deployment.
+                readability. The underlying GitHub Actions implementation in the flagship
+                DevSecOps pipeline reference architecture currently spans 15 total stages from
+                validation through approved deployment.
               </p>
             </div>
             <div class="pipeline-shell reveal">
@@ -864,6 +930,11 @@
                 <small>University of Maryland Global Campus</small>
               </article>
               <article class="prof-dev-card reveal">
+                <span class="prof-dev-type">Diploma</span>
+                <h3>Diploma in Basic Education</h3>
+                <small>University of Cape Coast</small>
+              </article>
+              <article class="prof-dev-card reveal">
                 <span class="prof-dev-type">Undergraduate Degree</span>
                 <h3>Bachelor of Education in Mathematics</h3>
                 <small>University of Education, Winneba</small>
@@ -904,8 +975,8 @@
                 <h3>UBAG Store</h3>
                 <p>
                   E-commerce platform for Uncle Bakarr African Grocery in Utica, New York,
-                  extending digital access to a minority-owned local business serving an immigrant
-                  community through online commerce infrastructure.
+                  extending digital access to a minority-owned local business serving the
+                  surrounding Utica community through online commerce infrastructure.
                 </p>
                 <a class="text-link" href="https://ubagstore.com">ubagstore.com</a>
               </article>
@@ -1236,7 +1307,7 @@
             health information, or proprietary systems are included.
           </p>
           <p class="footer-note">
-            &copy; 2025 Peter Christian Agbenyega. Cloud Nexus Hub LLC. Utica, New York.
+            &copy; 2026 Peter Christian Agbenyega. Cloud Nexus Hub LLC. Utica, New York.
           </p>
         </div>
       </footer>
