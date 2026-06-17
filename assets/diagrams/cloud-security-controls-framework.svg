@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 780" role="img" aria-labelledby="title desc">
+  <title id="title">Cloud Security Controls Framework</title>
+  <desc id="desc">Flat technical reference diagram showing inputs, control domains, outputs, and continuous review for cloud security assessment work.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#6b7280"/>
+    </marker>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#1f2937}
+      .canvas{fill:#ffffff;stroke:#d1d5db;stroke-width:1.5}
+      .section{fill:#f9fafb;stroke:#cbd5e1;stroke-width:1.2}
+      .input{fill:#fff7ed;stroke:#f0b36a;stroke-width:1.4}
+      .control{fill:#ecfdf5;stroke:#86c7a6;stroke-width:1.4}
+      .output{fill:#eef6ff;stroke:#8bb5e8;stroke-width:1.4}
+      .title-text{font-size:24px;font-weight:700}
+      .section-text{font-size:17px;font-weight:700;fill:#2563eb}
+      .label{font-size:16px;font-weight:600}
+      .small{font-size:14px;font-weight:600}
+      .line{fill:none;stroke:#6b7280;stroke-width:1.6;marker-end:url(#arrow)}
+      .loop{fill:none;stroke:#6b7280;stroke-width:1.4;stroke-dasharray:6 6;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect class="canvas" x="20" y="20" width="1360" height="740" rx="6"/>
+  <text class="title-text" x="48" y="58">Cloud Security Controls Framework</text>
+
+  <rect class="section" x="72" y="120" width="210" height="480" rx="6"/>
+  <text class="section-text" x="96" y="154">Inputs</text>
+  <rect class="input" x="112" y="204" width="130" height="52" rx="4"/>
+  <text class="small" x="177" y="226" text-anchor="middle">Cloud</text>
+  <text class="small" x="177" y="246" text-anchor="middle">Accounts</text>
+  <rect class="input" x="112" y="292" width="130" height="46" rx="4"/>
+  <text class="small" x="177" y="320" text-anchor="middle">Applications</text>
+  <rect class="input" x="112" y="374" width="130" height="46" rx="4"/>
+  <text class="small" x="177" y="402" text-anchor="middle">Users</text>
+  <rect class="input" x="112" y="456" width="130" height="46" rx="4"/>
+  <text class="small" x="177" y="484" text-anchor="middle">Data</text>
+
+  <rect class="section" x="372" y="120" width="500" height="480" rx="6"/>
+  <text class="section-text" x="396" y="154">Control Domains</text>
+  <rect class="control" x="420" y="204" width="170" height="58" rx="4"/>
+  <text class="small" x="505" y="228" text-anchor="middle">Identity</text>
+  <text class="small" x="505" y="248" text-anchor="middle">Access Control</text>
+  <rect class="control" x="650" y="204" width="170" height="58" rx="4"/>
+  <text class="small" x="735" y="228" text-anchor="middle">Network</text>
+  <text class="small" x="735" y="248" text-anchor="middle">Exposure</text>
+  <rect class="control" x="420" y="304" width="170" height="52" rx="4"/>
+  <text class="small" x="505" y="336" text-anchor="middle">Encryption</text>
+  <rect class="control" x="650" y="304" width="170" height="58" rx="4"/>
+  <text class="small" x="735" y="328" text-anchor="middle">Logging</text>
+  <text class="small" x="735" y="348" text-anchor="middle">Monitoring</text>
+  <rect class="control" x="420" y="406" width="170" height="58" rx="4"/>
+  <text class="small" x="505" y="430" text-anchor="middle">Backup</text>
+  <text class="small" x="505" y="450" text-anchor="middle">Recovery</text>
+  <rect class="control" x="650" y="406" width="170" height="64" rx="4"/>
+  <text class="small" x="735" y="430" text-anchor="middle">Vulnerability</text>
+  <text class="small" x="735" y="450" text-anchor="middle">Deployment Risk</text>
+
+  <rect class="section" x="962" y="120" width="230" height="480" rx="6"/>
+  <text class="section-text" x="986" y="154">Outputs</text>
+  <rect class="output" x="1008" y="220" width="140" height="50" rx="4"/>
+  <text class="small" x="1078" y="250" text-anchor="middle">Risk Register</text>
+  <rect class="output" x="1008" y="334" width="140" height="56" rx="4"/>
+  <text class="small" x="1078" y="358" text-anchor="middle">Remediation</text>
+  <text class="small" x="1078" y="378" text-anchor="middle">Plan</text>
+  <rect class="output" x="1008" y="454" width="140" height="50" rx="4"/>
+  <text class="small" x="1078" y="484" text-anchor="middle">Evidence Pack</text>
+
+  <rect class="section" x="1240" y="250" width="110" height="160" rx="6"/>
+  <text class="section-text" x="1258" y="284">Review</text>
+  <rect class="output" x="1264" y="318" width="62" height="56" rx="4"/>
+  <text class="small" x="1295" y="340" text-anchor="middle">Cycle</text>
+  <text class="small" x="1295" y="360" text-anchor="middle">Review</text>
+
+  <path class="line" d="M242 230 H420"/>
+  <path class="line" d="M242 315 H420"/>
+  <path class="line" d="M242 397 H420"/>
+  <path class="line" d="M242 479 H420"/>
+  <path class="line" d="M820 233 H1008"/>
+  <path class="line" d="M820 333 H1008"/>
+  <path class="line" d="M820 438 H1008"/>
+  <path class="line" d="M1148 245 H1240 V346 H1264"/>
+  <path class="loop" d="M1295 318 V86 H505 V204"/>
+</svg>

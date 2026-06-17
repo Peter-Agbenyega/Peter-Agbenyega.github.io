@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 780" role="img" aria-labelledby="title desc">
+  <title id="title">Secure DevSecOps Pipeline Reference Architecture</title>
+  <desc id="desc">Flat technical reference diagram showing source, security gates, approval, staging, production, and evidence outputs.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#6b7280"/>
+    </marker>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#1f2937}
+      .canvas{fill:#ffffff;stroke:#d1d5db;stroke-width:1.5}
+      .section{fill:#f9fafb;stroke:#cbd5e1;stroke-width:1.2}
+      .component{fill:#eef6ff;stroke:#8bb5e8;stroke-width:1.4}
+      .source{fill:#fff7ed;stroke:#f0b36a;stroke-width:1.4}
+      .control{fill:#ecfdf5;stroke:#86c7a6;stroke-width:1.4}
+      .title-text{font-size:24px;font-weight:700}
+      .section-text{font-size:17px;font-weight:700;fill:#2563eb}
+      .label{font-size:16px;font-weight:600}
+      .small{font-size:14px;font-weight:600}
+      .line{fill:none;stroke:#6b7280;stroke-width:1.6;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect class="canvas" x="20" y="20" width="1360" height="740" rx="6"/>
+  <text class="title-text" x="48" y="58">Secure DevSecOps Pipeline Reference Architecture</text>
+
+  <rect class="section" x="68" y="122" width="250" height="220" rx="6"/>
+  <text class="section-text" x="92" y="156">Source</text>
+  <rect class="source" x="104" y="208" width="120" height="48" rx="4"/>
+  <text class="label" x="164" y="238" text-anchor="middle">Developer</text>
+  <rect class="source" x="104" y="278" width="120" height="44" rx="4"/>
+  <text class="small" x="164" y="306" text-anchor="middle">Commit</text>
+  <rect class="source" x="238" y="242" width="56" height="48" rx="4"/>
+  <text class="small" x="266" y="262" text-anchor="middle">Pull</text>
+  <text class="small" x="266" y="282" text-anchor="middle">Request</text>
+
+  <rect class="section" x="388" y="122" width="500" height="320" rx="6"/>
+  <text class="section-text" x="412" y="156">Pipeline Gates</text>
+  <rect class="control" x="430" y="206" width="140" height="44" rx="4"/>
+  <text class="small" x="500" y="234" text-anchor="middle">Secret Scan</text>
+  <rect class="control" x="620" y="206" width="150" height="44" rx="4"/>
+  <text class="small" x="695" y="234" text-anchor="middle">Dependency Scan</text>
+  <rect class="control" x="430" y="282" width="140" height="44" rx="4"/>
+  <text class="small" x="500" y="310" text-anchor="middle">SAST</text>
+  <rect class="control" x="620" y="282" width="150" height="44" rx="4"/>
+  <text class="small" x="695" y="310" text-anchor="middle">IaC Scan</text>
+  <rect class="control" x="430" y="358" width="140" height="44" rx="4"/>
+  <text class="small" x="500" y="386" text-anchor="middle">Container Scan</text>
+  <rect class="control" x="620" y="358" width="150" height="44" rx="4"/>
+  <text class="small" x="695" y="386" text-anchor="middle">Manual Approval</text>
+
+  <rect class="section" x="958" y="122" width="280" height="220" rx="6"/>
+  <text class="section-text" x="982" y="156">Deployment</text>
+  <rect class="component" x="1004" y="220" width="120" height="48" rx="4"/>
+  <text class="label" x="1064" y="250" text-anchor="middle">Staging</text>
+  <rect class="component" x="1004" y="288" width="120" height="48" rx="4"/>
+  <text class="label" x="1064" y="318" text-anchor="middle">Production</text>
+
+  <rect class="section" x="958" y="444" width="280" height="170" rx="6"/>
+  <text class="section-text" x="982" y="478">Evidence</text>
+  <rect class="component" x="1004" y="520" width="120" height="42" rx="4"/>
+  <text class="small" x="1064" y="546" text-anchor="middle">Audit Logs</text>
+  <rect class="component" x="1144" y="520" width="76" height="58" rx="4"/>
+  <text class="small" x="1182" y="542" text-anchor="middle">Security</text>
+  <text class="small" x="1182" y="562" text-anchor="middle">Report</text>
+
+  <path class="line" d="M224 232 H238"/>
+  <path class="line" d="M294 266 H430"/>
+  <path class="line" d="M570 228 H620"/>
+  <path class="line" d="M695 250 V282"/>
+  <path class="line" d="M620 304 H570"/>
+  <path class="line" d="M500 326 V358"/>
+  <path class="line" d="M570 380 H620"/>
+  <path class="line" d="M770 380 H1004 V220"/>
+  <path class="line" d="M1064 268 V288"/>
+  <path class="line" d="M1064 336 V520"/>
+  <path class="line" d="M1124 541 H1144"/>
+  <text class="small" x="460" y="494">Security checks complete before deployment.</text>
+</svg>

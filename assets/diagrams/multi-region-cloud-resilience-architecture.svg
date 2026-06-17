@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <title id="title">Multi-Region Cloud Resilience Architecture</title>
+  <desc id="desc">Flat technical reference diagram showing user traffic, DNS failover, primary and secondary regions, database replication, backups, and recovery planning.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#6b7280"/>
+    </marker>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#1f2937}
+      .canvas{fill:#ffffff;stroke:#d1d5db;stroke-width:1.5}
+      .section{fill:#f9fafb;stroke:#cbd5e1;stroke-width:1.2}
+      .component{fill:#eef6ff;stroke:#8bb5e8;stroke-width:1.4}
+      .source{fill:#fff7ed;stroke:#f0b36a;stroke-width:1.4}
+      .control{fill:#ecfdf5;stroke:#86c7a6;stroke-width:1.4}
+      .title-text{font-size:24px;font-weight:700}
+      .section-text{font-size:17px;font-weight:700;fill:#2563eb}
+      .label{font-size:16px;font-weight:600}
+      .small{font-size:14px;font-weight:600}
+      .traffic{fill:none;stroke:#6b7280;stroke-width:1.7;marker-end:url(#arrow)}
+      .data{fill:none;stroke:#6b7280;stroke-width:1.5;stroke-dasharray:6 6;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect class="canvas" x="20" y="20" width="1360" height="780" rx="6"/>
+  <text class="title-text" x="48" y="58">Multi-Region Cloud Resilience Architecture</text>
+
+  <rect class="source" x="82" y="176" width="130" height="52" rx="4"/>
+  <text class="label" x="147" y="208" text-anchor="middle">Users</text>
+  <rect class="component" x="292" y="176" width="170" height="52" rx="4"/>
+  <text class="label" x="377" y="208" text-anchor="middle">DNS Failover</text>
+
+  <rect class="section" x="552" y="112" width="290" height="300" rx="6"/>
+  <text class="section-text" x="574" y="146">Primary Region</text>
+  <rect class="component" x="604" y="190" width="150" height="52" rx="4"/>
+  <text class="label" x="679" y="222" text-anchor="middle">App Tier</text>
+  <rect class="component" x="604" y="284" width="150" height="52" rx="4"/>
+  <text class="label" x="679" y="316" text-anchor="middle">Database</text>
+  <rect class="control" x="604" y="352" width="150" height="42" rx="4"/>
+  <text class="small" x="679" y="378" text-anchor="middle">Monitoring</text>
+
+  <rect class="section" x="970" y="112" width="310" height="300" rx="6"/>
+  <text class="section-text" x="992" y="146">Secondary Region</text>
+  <rect class="control" x="1026" y="190" width="170" height="52" rx="4"/>
+  <text class="small" x="1111" y="222" text-anchor="middle">Standby App Tier</text>
+  <rect class="control" x="1026" y="284" width="170" height="58" rx="4"/>
+  <text class="small" x="1111" y="308" text-anchor="middle">Replica / Backup</text>
+  <text class="small" x="1111" y="328" text-anchor="middle">Database</text>
+  <rect class="control" x="1026" y="362" width="170" height="42" rx="4"/>
+  <text class="small" x="1111" y="388" text-anchor="middle">Recovery Plan</text>
+
+  <path class="traffic" d="M212 202 H292"/>
+  <path class="traffic" d="M462 202 H604"/>
+  <path class="traffic" d="M679 242 V284"/>
+  <path class="traffic" d="M377 228 V494 H1111 V242"/>
+  <text class="small" x="430" y="482">Failure path after primary health check fails</text>
+
+  <rect class="section" x="280" y="570" width="840" height="132" rx="6"/>
+  <text class="section-text" x="304" y="604">Backup Layer</text>
+  <rect class="source" x="438" y="634" width="230" height="46" rx="4"/>
+  <text class="small" x="553" y="662" text-anchor="middle">S3 Cross-Region Replication</text>
+  <rect class="source" x="780" y="634" width="170" height="46" rx="4"/>
+  <text class="small" x="865" y="662" text-anchor="middle">Backup Vault</text>
+
+  <path class="data" d="M754 310 H1026"/>
+  <text class="small" x="820" y="300">Database replication</text>
+  <path class="data" d="M679 336 V634 H438"/>
+  <path class="data" d="M668 657 H780"/>
+</svg>

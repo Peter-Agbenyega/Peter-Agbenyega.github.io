@@ -560,68 +560,27 @@ svg {
 }
 
 .project-diagram {
-  background: #F1F5F9;
+  background: #f8fafc;
   border-radius: 8px;
   padding: 0.65rem;
   margin-bottom: 1.15rem;
-  border: 1px solid rgba(203, 213, 225, 0.9);
-  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
 
-.project-diagram img,
-.project-diagram svg {
+.project-diagram img {
   display: block;
   width: 100%;
-  min-width: 820px;
+  max-width: 100%;
+  min-width: 0;
   height: auto;
-}
-
-.project-diagram text {
-  font: 600 10px/1.2 "JetBrains Mono", monospace;
-  fill: #1E293B;
-}
-
-.project-diagram .diagram-title {
-  font: 700 12px/1.2 "JetBrains Mono", monospace;
-  letter-spacing: 0.04em;
-  fill: #0F172A;
-}
-
-.project-diagram .diagram-label {
-  font: 600 9px/1.2 "JetBrains Mono", monospace;
-  fill: #475569;
 }
 
 .diagram-caption {
   margin: 0 0 0.9rem;
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.62);
-}
-
-.diagram-node,
-.diagram-layer {
-  fill: #FFFFFF;
-  stroke: #93C5FD;
-  stroke-width: 1.5;
-}
-
-.diagram-node-gold {
-  fill: #FFFBEB;
-  stroke: #F59E0B;
-}
-
-.diagram-node-success,
-.diagram-layer {
-  fill: #F0FDF4;
-  stroke: #34D399;
-}
-
-.diagram-arrow {
-  fill: none;
-  stroke: #64748B;
-  stroke-width: 1.5;
-  stroke-linecap: round;
 }
 
 .aws-boundary,
@@ -699,26 +658,29 @@ svg {
 }
 
 .pipeline-shell {
-  padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.04);
+  padding: 1.6rem;
+  background:
+    linear-gradient(135deg, rgba(29, 78, 216, 0.1), rgba(245, 158, 11, 0.05)),
+    rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(148, 163, 184, 0.14);
 }
 
 .pipeline-track {
   display: grid;
-  grid-template-columns: repeat(15, minmax(0, 1fr));
-  gap: 0.7rem;
-  align-items: center;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: stretch;
 }
 
 .pipeline-stage {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(148, 163, 184, 0.16);
-  border-radius: 18px;
-  padding: 1rem 0.8rem;
-  min-height: 124px;
+  border-radius: 14px;
+  padding: 1.1rem;
+  min-height: 142px;
   display: grid;
   align-content: start;
-  gap: 0.4rem;
+  gap: 0.55rem;
   transition: transform var(--transition), border-color var(--transition), background var(--transition);
 }
 
@@ -743,6 +705,19 @@ svg {
   color: var(--white);
 }
 
+.pipeline-stage strong {
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.pipeline-stage small {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.88rem;
+  line-height: 1.45;
+  overflow-wrap: normal;
+  hyphens: none;
+}
+
 .pipeline-icon {
   width: 2rem;
   height: 2rem;
@@ -763,14 +738,22 @@ svg {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
-  margin-top: 1.5rem;
+  margin-top: 1.4rem;
 }
 
 .pipeline-columns div {
   padding: 1.2rem;
-  border-radius: 18px;
+  border-radius: 14px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.pipeline-columns h3 {
+  margin-bottom: 0.75rem;
+}
+
+.pipeline-columns li {
+  line-height: 1.55;
 }
 
 .pipeline-columns ul,
@@ -916,7 +899,8 @@ svg {
 }
 
 .about-grid {
-  align-items: center;
+  align-items: stretch;
+  grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.2fr);
 }
 
 .profile-panel {
@@ -924,10 +908,21 @@ svg {
   text-align: center;
 }
 
+.about-identity {
+  display: grid;
+  gap: 1.25rem;
+  align-content: center;
+  min-height: 100%;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  background:
+    linear-gradient(160deg, rgba(245, 158, 11, 0.1), transparent 42%),
+    rgba(255, 255, 255, 0.05);
+}
+
 .profile-placeholder {
-  width: min(320px, 70vw);
+  width: min(172px, 48vw);
   aspect-ratio: 1;
-  margin: 0 auto 1.25rem;
+  margin: 0 auto;
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -935,8 +930,71 @@ svg {
     radial-gradient(circle at 30% 30%, rgba(245, 158, 11, 0.18), transparent 30%),
     linear-gradient(180deg, #0f2748, #081321);
   border: 2px solid rgba(245, 158, 11, 0.6);
-  font: 700 4rem/1 "Playfair Display", serif;
+  font: 700 3rem/1 "Playfair Display", serif;
   color: #ffd27a;
+}
+
+.profile-photo {
+  width: min(172px, 48vw);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  margin: 0 auto;
+  border: 2px solid rgba(245, 158, 11, 0.65);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+  display: block;
+}
+
+.identity-copy {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.identity-copy strong {
+  font-size: 1.2rem;
+}
+
+.identity-copy span,
+.identity-copy small {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.about-highlight-grid {
+  display: grid;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+.about-highlight-grid div {
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.about-highlight-grid strong {
+  color: var(--white);
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+
+.about-copy {
+  background:
+    linear-gradient(135deg, rgba(29, 78, 216, 0.08), rgba(245, 158, 11, 0.05)),
+    rgba(255, 255, 255, 0.05);
+  border-color: rgba(148, 163, 184, 0.16);
+}
+
+.about-copy p {
+  color: rgba(255, 255, 255, 0.76);
+  line-height: 1.75;
+}
+
+.about-copy .about-location {
+  margin-top: 1.1rem;
+  color: #ffd27a;
+  font-weight: 700;
 }
 
 .contact-inline a {
@@ -1027,7 +1085,7 @@ svg {
   }
 
   .pipeline-track {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .pipeline-connector {
@@ -1135,6 +1193,26 @@ svg {
 
   .project-card {
     padding-top: 0;
+  }
+
+  .project-diagram {
+    overflow-x: auto;
+  }
+
+  .project-diagram img {
+    min-width: 760px;
+  }
+
+  .pipeline-track {
+    grid-template-columns: 1fr;
+  }
+
+  .pipeline-stage {
+    min-height: 0;
+  }
+
+  .about-highlight-grid {
+    text-align: center;
   }
 
   .brand-copy small {

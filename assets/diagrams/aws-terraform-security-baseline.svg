@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 780" role="img" aria-labelledby="title desc">
+  <title id="title">AWS Terraform Security Baseline</title>
+  <desc id="desc">Flat technical reference diagram showing Terraform source, review gates, AWS baseline controls, and plan apply evidence flow.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#6b7280"/>
+    </marker>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#1f2937}
+      .canvas{fill:#ffffff;stroke:#d1d5db;stroke-width:1.5}
+      .section{fill:#f9fafb;stroke:#cbd5e1;stroke-width:1.2}
+      .component{fill:#eef6ff;stroke:#8bb5e8;stroke-width:1.4}
+      .source{fill:#fff7ed;stroke:#f0b36a;stroke-width:1.4}
+      .control{fill:#ecfdf5;stroke:#86c7a6;stroke-width:1.4}
+      .title-text{font-size:24px;font-weight:700}
+      .section-text{font-size:17px;font-weight:700;fill:#2563eb}
+      .label{font-size:16px;font-weight:600}
+      .small{font-size:14px;font-weight:600}
+      .line{fill:none;stroke:#6b7280;stroke-width:1.6;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect class="canvas" x="20" y="20" width="1360" height="740" rx="6"/>
+  <text class="title-text" x="48" y="58">AWS Terraform Security Baseline</text>
+
+  <rect class="section" x="76" y="124" width="260" height="220" rx="6"/>
+  <text class="section-text" x="100" y="158">Infrastructure Source</text>
+  <rect class="source" x="118" y="218" width="130" height="50" rx="4"/>
+  <text class="label" x="183" y="249" text-anchor="middle">Terraform</text>
+  <rect class="source" x="118" y="288" width="130" height="42" rx="4"/>
+  <text class="small" x="183" y="314" text-anchor="middle">Remote State</text>
+
+  <rect class="section" x="416" y="124" width="360" height="220" rx="6"/>
+  <text class="section-text" x="440" y="158">Review Gates</text>
+  <rect class="control" x="462" y="206" width="120" height="42" rx="4"/>
+  <text class="small" x="522" y="232" text-anchor="middle">Format</text>
+  <rect class="control" x="622" y="206" width="120" height="42" rx="4"/>
+  <text class="small" x="682" y="232" text-anchor="middle">Validate</text>
+  <rect class="control" x="462" y="276" width="120" height="42" rx="4"/>
+  <text class="small" x="522" y="302" text-anchor="middle">Checkov</text>
+  <rect class="control" x="622" y="276" width="120" height="42" rx="4"/>
+  <text class="small" x="682" y="302" text-anchor="middle">Gitleaks</text>
+
+  <rect class="section" x="856" y="124" width="360" height="220" rx="6"/>
+  <text class="section-text" x="880" y="158">AWS Baseline Controls</text>
+  <rect class="component" x="912" y="206" width="120" height="42" rx="4"/>
+  <text class="small" x="972" y="232" text-anchor="middle">IAM</text>
+  <rect class="component" x="1054" y="206" width="120" height="42" rx="4"/>
+  <text class="small" x="1114" y="232" text-anchor="middle">VPC</text>
+  <rect class="component" x="912" y="276" width="120" height="42" rx="4"/>
+  <text class="small" x="972" y="302" text-anchor="middle">KMS</text>
+  <rect class="component" x="1054" y="276" width="120" height="42" rx="4"/>
+  <text class="small" x="1114" y="302" text-anchor="middle">RDS</text>
+
+  <rect class="section" x="328" y="466" width="780" height="150" rx="6"/>
+  <text class="section-text" x="352" y="500">Plan, Apply, and Evidence</text>
+  <rect class="component" x="418" y="536" width="140" height="46" rx="4"/>
+  <text class="label" x="488" y="564" text-anchor="middle">Plan</text>
+  <rect class="component" x="638" y="536" width="140" height="46" rx="4"/>
+  <text class="label" x="708" y="564" text-anchor="middle">Apply</text>
+  <rect class="control" x="858" y="536" width="170" height="46" rx="4"/>
+  <text class="small" x="943" y="564" text-anchor="middle">Logging / Evidence</text>
+
+  <path class="line" d="M248 243 H462"/>
+  <path class="line" d="M582 227 H622"/>
+  <path class="line" d="M682 248 V276"/>
+  <path class="line" d="M742 297 H912"/>
+  <path class="line" d="M972 318 V536 H558"/>
+  <path class="line" d="M558 559 H638"/>
+  <path class="line" d="M778 559 H858"/>
+  <text class="small" x="500" y="668">Security checks run before infrastructure changes are applied.</text>
+</svg>
