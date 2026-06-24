@@ -1998,3 +1998,17 @@ svg {
     transform: none !important;
   }
 }
+
+/* Final About heading cleanup */
+#about .about-copy h2,
+.about-copy h2,
+.content-panel.about-copy h2 {
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: #f8fafc !important;
+  display: block !important;
+  padding: 0 !important;
+  width: auto !important;
+}
