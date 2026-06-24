@@ -23,6 +23,11 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 120px;
+}
+
+section {
+  scroll-margin-top: 120px;
 }
 
 body {
@@ -981,14 +986,23 @@ svg {
 
 .about-copy {
   background:
-    linear-gradient(135deg, rgba(29, 78, 216, 0.08), rgba(245, 158, 11, 0.05)),
+    linear-gradient(135deg, rgba(29, 78, 216, 0.08), rgba(255, 255, 255, 0.03)),
     rgba(255, 255, 255, 0.05);
   border-color: rgba(148, 163, 184, 0.16);
 }
 
+.about-copy h2 {
+  background: transparent;
+  color: var(--white);
+  display: block;
+  box-decoration-break: initial;
+}
+
 .about-copy p {
   color: rgba(255, 255, 255, 0.76);
-  line-height: 1.75;
+  line-height: 1.8;
+  max-width: 68ch;
+  margin-bottom: 1.4rem;
 }
 
 .about-copy .about-location {
